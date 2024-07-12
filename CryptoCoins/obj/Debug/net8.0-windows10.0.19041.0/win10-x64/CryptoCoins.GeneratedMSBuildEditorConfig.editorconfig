@@ -1,0 +1,159 @@
+is_global = true
+build_property.TargetFramework = net8.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CryptoCoins
+build_property.RootNamespace = CryptoCoins
+build_property.ProjectDir = E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CryptoCoins.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CryptoCoins.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Views/AddEmail.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CryptoCoins.Views.AddEmail.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AddEmail.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AddEmail.xaml
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Views/DashboardView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CryptoCoins.Views.DashboardView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DashboardView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DashboardView.xaml
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Views/LoginView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CryptoCoins.Views.LoginView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\LoginView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\LoginView.xaml
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Views/NewPassword.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CryptoCoins.Views.NewPassword.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\NewPassword.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\NewPassword.xaml
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Views/SignupView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CryptoCoins.Views.SignupView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SignupView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SignupView.xaml
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Views/VerifyCode.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CryptoCoins.Views.VerifyCode.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\VerifyCode.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\VerifyCode.xaml
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Components/Pages/Account.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NvdW50LnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Components/Pages/Contact.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb250YWN0LnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Components/Pages/Launchpad.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYXVuY2hwYWQucmF6b3I=
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Components/Pages/LicencePage.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMaWNlbmNlUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Components/Pages/ManageWallets.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNYW5hZ2VXYWxsZXRzLnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Components/Pages/Subscriptions.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdWJzY3JpcHRpb25zLnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Components/Pages/WebViewComponent.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWJWaWV3Q29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Routes.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Um91dGVzLnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/_Imports.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = b-jhwcgwl9x4
+
+[E:/fiverr/code/mark n/latest/1/CryptoCoins_28May/CryptoCoins/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = b-o9wum5zihr

@@ -1,0 +1,21 @@
+﻿@page "/webview"
+@using Microsoft.AspNetCore.Components.WebView.Maui
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+
+<WebView Source="@Url" />
+<div style="text-align:center;">hello</div>
+
+@code {
+    [Parameter]
+    public string Url { get; set; } = "https://www.google.com"; // Default URL
+
+    protected override void OnParametersSet()
+    {
+        JSRuntime.InvokeVoidAsync("alert", $"{Url}");
+        var uri = new Uri(NavigationManager.Uri);
+        var queryParams = System.Web.HttpUtility.ParseQueryString(uri.Query);
+        Url = queryParams["url"] ?? Url; // Use provided URL or default
+
+    }
+}

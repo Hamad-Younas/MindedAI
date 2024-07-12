@@ -1,0 +1,719 @@
+﻿@page "/"
+@using CryptoCoins.Helpers
+@using CryptoCoins.Models
+@using CryptoCoins.Services
+@using MySql.Data.MySqlClient
+@using System.Data
+@using System.Text.Json;
+@using System.IO;
+@using System.Reflection;
+@using System.Text.Json.Serialization;
+@inject IJSRuntime JSRuntime
+@using static CryptoCoins.Components.Pages.ManageWallets
+
+
+@if (StGlobal.IsAdmin)
+{
+	<script>window.location.href = '/wallets';</script>
+}
+<div class="dashboard">
+	<div class="head-home">
+		<h4 class="heading">Welcome! We wish you good Reseach and Profits!</h4>
+	</div>
+	<p class="text-xs font-normal text-gray-400">Here is an overview of your work</p>
+	<div class="flex items-center justify-content-center gap-6 mt-4">
+		<div class="relative group w-100">
+			@* <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div> *@
+			<div class="relative px-7 py-2 leading-none flex items-top justify-start space-x-6" style="background-color:#383838;border-radius:5px;">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+				</svg>
+				<div class="space-y-2">
+					<p class="text-gray-400 text-base">In all the time</p>
+					<p class="text-white font-bold">$@CCAmount.totalAmount.ToString("0.00")</p>
+				</div>
+			</div>
+		</div>
+		<div class="relative group w-100">
+			@* <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div> *@
+			<div class="relative px-7 py-2 leading-none flex items-top justify-start space-x-6" style="background-color:#383838;border-radius:5px;">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+				</svg>
+				<div class="space-y-2">
+					<p class="text-gray-400 text-base">In the last 30 days</p>
+					<p class="text-white font-bold">$@CCAmount.total30DaysAmount.ToString("0.00")</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mt-4">
+		<h7 class="text-lg font-bold">
+			Blockchain
+		</h7>
+		<p class="text-xs font-normal text-gray-400">
+			Statistics on specific blockchain
+		</p>
+	</div>
+	<div class="flex items-center justify-content-center gap-6 mt-4">
+		<div class="relative group w-100">
+			@* <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div> *@
+			<div class="relative px-3 py-2 leading-none flex items-top justify-start items-center space-x-3" style="background-color:#383838;border-radius:5px;">
+				<img src="images/btc.png" width="40" height="30" />
+				<div class="space-y-2">
+					<p class="text-gray-400 text-base">In the last 30 days</p>
+					<p class="text-white font-bold">$@CCAmount.BTC30DaysAmount.ToString("0.00") BTC</p>
+				</div>
+			</div>
+		</div>
+		<div class="relative group w-100">
+			@* <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div> *@
+			<div class="relative px-3 py-2 leading-none flex items-top justify-start items-center space-x-3" style="background-color:#383838;border-radius:5px;">
+				<img src="images/eth.png" width="40" height="30" />
+				<div class="space-y-2">
+					<p class="text-gray-400 text-base">In the last 30 days</p>
+					<p class="text-white font-bold">$@CCAmount.ETH30DaysAmount.ToString("0.00") ETH</p>
+				</div>
+			</div>
+		</div>
+		<div class="relative group w-100">
+			@* <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div> *@
+			<div class="relative px-3 py-2 leading-none flex items-top justify-start items-center space-x-3" style="background-color:#383838;border-radius:5px;">
+				<img src="images/bnb.png" width="40" height="30" />
+				<div class="space-y-2">
+					<p class="text-gray-400 text-base">In the last 30 days</p>
+					<p class="text-white font-bold">$@CCAmount.BNB30DaysAmount.ToString("0.00") BNB</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="flex items-center justify-content-center gap-6 mt-2">
+		<div class="relative group w-100">
+			@* <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div> *@
+			<div class="relative px-3 py-2 leading-none flex items-top justify-start items-center space-x-3" style="background-color:#383838;border-radius:5px;">
+				<img src="images/sol2.png" width="40" height="30" />
+				<div class="space-y-2">
+					<p class="text-gray-400 text-base">In the last 30 days</p>
+					<p class="text-white font-bold">$@CCAmount.SOL30DaysAmount.ToString("0.00") SOL</p>
+				</div>
+			</div>
+		</div>
+		<div class="relative group w-100">
+			@* <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div> *@
+			<div class="relative px-3 py-2 leading-none flex items-top justify-start items-center space-x-3" style="background-color:#383838;border-radius:5px;">
+				<img src="images/usdt.png" width="40" height="30" />
+				<div class="space-y-2">
+					<p class="text-gray-400 text-base">In the last 30 days</p>
+					<p class="text-white font-bold">$@CCAmount.USDT30DaysAmount.ToString("0.00") USDT</p>
+				</div>
+			</div>
+		</div>
+		<div class="relative group w-100">
+			@* <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div> *@
+			<div class="relative px-3 py-2 leading-none flex items-top justify-start items-center space-x-3" style="background-color:#383838;border-radius:5px;">
+				<img src="images/xrp.png" width="40" height="30" />
+				<div class="space-y-2">
+					<p class="text-gray-400 text-base">In the last 30 days</p>
+					<p class="text-white font-bold">$@CCAmount.XRP30DaysAmount.ToString("0.00") XRP</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="shadow-xl pt-4 pb-1 px-5 w-full mt-4" x-data="{chartData:chartData()}" x-init="chartData.fetch('/data/data.json')" style="background-color:#383838;border-radius:5px;">
+		<div class="flex flex-wrap items-end">
+			<div class="flex-1">
+				<h3 class="text-lg font-semibold leading-tight">Income</h3>
+			</div>
+			<div class="relative" @click.away="chartData.showDropdown=false">
+				<button class="text-xs hover:text-gray-300 h-6 focus:outline-none" @click="chartData.showDropdown=!chartData.showDropdown">
+					<span x-text="chartData.options[chartData.selectedOption].label"></span><i class="ml-1 mdi mdi-chevron-down"></i>
+				</button>
+				<div class="shadow-lg rounded text-sm absolute top-auto right-0 min-w-full w-32 z-30 mt-1 -mr-3" x-show="chartData.showDropdown" style="background-color: #202022;display: none;" x-transition:enter="transition ease duration-300 transform" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease duration-300 transform" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4">
+					<span class="absolute top-0 right-0 w-3 h-3 transform rotate-45 -mt-1 mr-3" style="background-color: #202022;"></span>
+					<div class="rounded w-full relative z-10 py-1" style="background-color: #202022;">
+						<ul class="list-reset text-xs">
+							<template x-for="(item,index) in chartData.options">
+								<li class="px-4 py-2 hover:bg-gray-600 hover:text-white transition-colors duration-100 cursor-pointer" :class="{'text-white':index==chartData.selectedOption}" @click="chartData.selectOption(index);chartData.showDropdown=false">
+									<span x-text="item.label"></span>
+								</li>
+							</template>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-wrap items-end mb-1">
+			<h4 class="text-2xl lg:text-3xl text-white font-semibold leading-tight inline-block mr-2" x-text="'$'+(chartData.data?chartData.data[chartData.date].total.comma_formatter():0)">0</h4>
+			@* <span class="inline-block" :class="chartData.data&&chartData.data[chartData.date].upDown<0?'text-red-500':'text-green-500'"><span x-text="chartData.data&&chartData.data[chartData.date].upDown<0?'▼':'▲'">0</span> <span x-text="chartData.data?chartData.data[chartData.date].upDown:0">0</span>%</span> *@
+		</div>
+		<div>
+			<canvas id="chart" class="w-100"></canvas>
+		</div>
+	</div>
+	<div class="w-100 mt-4 text-white rounded-md coin-table" style="background-color:#383838;height:450px;overflow-y:auto">
+		<div class="w-100 align-middle inline-block overflow-hidden px-8 pt-3 rounded-bl-lg rounded-br-lg">
+			<table class="w-100">
+				<thead>
+					<tr>
+						<th class="w-1/3 px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-white tracking-wider">Wallets found</th>
+						<th class="w-1/3 px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-white tracking-wider">Blockchain</th>
+						<th class="w-1/3 px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-white tracking-wider">Amount</th>
+					</tr>
+				</thead>
+				<tbody style="">
+
+					@foreach (var wallet in Wallets)
+					{
+						if (wallet.Blockchain == "BTC")
+						{
+							color = "#f7931a";
+						}
+						if (wallet.Blockchain == "BNB")
+						{
+							color = "#f0b90b";
+						}
+						if (wallet.Blockchain == "ETH")
+						{
+							color = "#9c9c9b";
+						}
+						if (wallet.Blockchain == "XRP")
+						{
+							color = "#ffffff";
+						}
+						if (wallet.Blockchain == "SOL")
+						{
+							color = "#ae65fc";
+						}
+						if (wallet.Blockchain == "USDT")
+						{
+							color = "#50af95";
+						}
+						<tr>
+							<td class="w-1/3 px-6 py-2 whitespace-no-wrap">
+								<p class="openModalButton text-decoration-underline text-gray-400 cursor-pointer" style="color:@color;" id="openModalButton"
+								   data-seedphrase="@wallet.SeedPhrase"
+								   data-blockchain="@wallet.Blockchain"
+								   data-amount="@wallet.Amount">@wallet.SeedPhrase.Substring(0, Math.Min(10, @wallet.SeedPhrase.Length))</p>
+							</td>
+							<td class="w-1/3 px-6 py-2 flex items-center gap-2 text-sm leading-5 text-white whitespace-no-wrap">
+								@* <img src="images/btccopia.png" alt="btc" width="30" height="30" /> *@
+								@switch (wallet.Blockchain)
+								{
+									case "BTC":
+										<img src="images/btc.png" alt="rpl" width="30" height="30" />
+										break;
+									case "BNB":
+										<img src="images/bnb.png" alt="eth" width="30" height="30" />
+										break;
+									case "ETH":
+										<img src="images/eth.png" alt="btc" width="30" height="30" />
+										break;
+									case "SOL":
+										<img src="images/sol2.png" alt="crd" width="30" height="30" />
+										break;
+									case "USDT":
+										<img src="images/usdt.png" alt="crd" width="30" height="30" />
+										break;
+									case "XRP":
+										<img src="images/xrp.png" alt="crd" width="30" height="30" />
+										break;
+								}
+								<p style="color:@color;font-weight:bold;">@wallet.Blockchain</p>
+							</td>
+							<td class="w-1/3 px-6 py-2 whitespace-no-wrap text-sm leading-5" style="color:@color;">@wallet.Amount</td>
+						</tr>
+
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div id="modal" class="modal fixed w-full h-full top-0 left-0 flex items-center justify-center hidden">
+	<!-- Overlay -->
+	<div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+	<div class="modal-container w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+		<!-- Modal content -->
+		<div class="modal-content text-white py-4 text-left px-6" style="background-color:#383838;">
+			<div class="flex justify-between items-center pb-3">
+				<p class="text-2xl font-bold">Seed Phrase</p>
+				<div id="closeModalButton" class="modal-close cursor-pointer z-50">
+					<svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+						<path d="M1.39 1.393l15.318 15.314m-15.318 0L16.706 1.393" />
+					</svg>
+				</div>
+			</div>
+			<p id="modal-blockchain">Blockchain - BTC</p>
+			<p id="modal-seedphrase">Seed Phrase - wire issue ivory please few tooth edit</p>
+			<p id="modal-amount">Balance - 0.0036</p>
+			<div class="mt-4 flex justify-end">
+				<button id="" class="hidden px-4 bg-gray-100 p-3 rounded-lg text-black hover:bg-gray-200">Cancel</button>
+				<button id="cancelButton" class="modal-close px-4 p-3 ml-3 rounded-lg text-white hover:bg-purple-400" style="background-color:#202022">Save</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	Number.prototype.comma_formatter = function () {
+		return this.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+	}
+
+	let chartData = function () {
+		return {
+			date: 'today',
+			options: [
+				{
+					label: 'Today',
+					value: 'today',
+				},
+				{
+					label: 'Last 7 Days',
+					value: 'sevendays',
+				},
+				{
+					label: 'Last 30 Days',
+					value: 'thirtydays',
+				},
+				{
+					label: 'Last 6 months',
+					value: 'sixmonths',
+				},
+				{
+					label: 'Year',
+					value: 'year',
+				}
+			],
+			showDropdown: false,
+			selectedOption: 0,
+			selectOption: function (index) {
+				this.selectedOption = index;
+				this.date = this.options[index].value;
+				this.renderChart();
+			},
+			data: null,
+			fetch: function (filePath) {
+				// Fetch the file
+				fetch(filePath)
+					.then(response => {
+						// Check if the request was successful
+						if (!response.ok) {
+							alert('Failed to fetch file');
+						}
+						// Parse the response as JSON
+						return response.json();
+					})
+					.then(jsonData => {
+						// Assuming the data structure is similar to the fetched data
+						this.data = jsonData.dates;
+						// Render the chart with the loaded data
+						this.renderChart();
+					})
+					.catch(error => {
+					});
+			},
+			renderChart: function () {
+				let c = false;
+
+				Chart.helpers.each(Chart.instances, function (instance) {
+					if (instance.chart.canvas.id == 'chart') {
+						c = instance;
+					}
+				});
+
+				if (c) {
+					c.destroy();
+				}
+
+				let ctx = document.getElementById('chart').getContext('2d');
+
+				let chart = new Chart(ctx, {
+					type: "line",
+					data: {
+						labels: this.data[this.date].data.labels,
+						datasets: [
+							{
+								label: "Income",
+								backgroundColor: "rgba(102, 126, 234, 0.25)",
+								borderColor: "rgba(102, 126, 234, 1)",
+								pointBackgroundColor: "rgba(102, 126, 234, 1)",
+								data: this.data[this.date].data.income,
+							},
+						],
+					},
+					layout: {
+						padding: {
+							right: 10
+						}
+					},
+					options: {
+						scales: {
+							yAxes: [{
+								gridLines: {
+									display: false
+								},
+								ticks: {
+									callback: function (value, index, array) {
+										return value > 1000 ? ((value < 1000000) ? value / 1000 + 'K' : value / 1000000 + 'M') : value;
+									}
+								}
+							}]
+						}
+					}
+				});
+			}
+		}
+	}
+</script>
+
+@code{
+
+	private const string OpenModalButtonId = "openModalButton";
+	private const string FormOpenModalButtonId = "formOpenModalButton";
+	private const string CloseModalButtonId = "cancelButton";
+	private const string FormCloseModalButtonId = "formCancelButton";
+	public string path = "";
+	public string color = "";
+
+
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if (firstRender)
+		{
+			await JSRuntime.InvokeVoidAsync("eval", @"
+            const openModalButtons = document.querySelectorAll('.openModalButton');
+            const closeModalButton = document.getElementById('cancelButton');
+            const formopenModalButtons = document.querySelectorAll('.formOpenModalButton');
+            const formcloseModalButton = document.getElementById('formCancelButton');
+            const modal = document.getElementById('modal');
+            const modal1 = document.getElementById('formModal');
+
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', openModal);
+            });
+
+            if (closeModalButton) {
+                closeModalButton.addEventListener('click', closeModal);
+            }
+
+            function openModal(event) {
+                const button = event.target;
+                const seedPhrase = button.getAttribute('data-seedphrase');
+                const blockchain = button.getAttribute('data-blockchain');
+                const amount = button.getAttribute('data-amount');
+
+                document.getElementById('modal-seedphrase').textContent = `Seedphrase - ${seedPhrase}`;
+                document.getElementById('modal-blockchain').textContent = `Blockchain - ${blockchain}`;
+                document.getElementById('modal-amount').textContent = `Amount - ${amount} ${blockchain}`;
+
+
+                modal.classList.remove('hidden');
+            }
+
+            function closeModal() {
+                modal.classList.add('hidden');
+            }
+
+            formopenModalButtons.forEach(button => {
+                    button.addEventListener('click', formopenModal);
+                });
+
+                if (formcloseModalButton) {
+                    formcloseModalButton.addEventListener('click', closeModal1);
+                }
+
+                function formopenModal(event) {
+                    modal1.classList.remove('hidden');
+                }
+
+                function closeModal1() {
+                    modal1.classList.add('hidden');
+                }
+        ");
+		}
+	}
+
+	private List<Wallet> Wallets = new List<Wallet>();
+	string name = "";
+	//private static readonly string _configFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files");
+	//private static readonly string _configFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Crypto");
+	public static readonly string _configFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Crypto");
+	private static string _configFile = Path.Combine(_configFolder, "data.json");
+
+
+	protected override void OnInitialized()
+	{
+		CCAmount.totalAmount = 0;
+		CCAmount.BNB30DaysAmount = 0;
+		CCAmount.BTC30DaysAmount = 0;
+		CCAmount.ETH30DaysAmount = 0;
+		CCAmount.SOL30DaysAmount = 0;
+		CCAmount.XRP30DaysAmount = 0;
+		CCAmount.USDT30DaysAmount = 0;
+		CCAmount.total30DaysAmount = 0;
+		GetWallets();
+		getAmount();
+		getallAmount();
+
+		string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "wwwroot/data/data.json");
+
+		var userAmount = GetUserAmounts();
+
+		// Transform user amounts into Root object (Assuming TransformData is a method returning a Root object)
+		Root rootData = TransformData(userAmount);
+		var json = JsonSerializer.Serialize(rootData, new JsonSerializerOptions { WriteIndented = true });
+
+
+		File.WriteAllText(filePath, json);
+	}
+
+	public void getAmount()
+	{
+		using (MySqlConnection connection = StGlobal.GetSqlConnection())
+		{
+			connection.Open();
+			// Query to sum up all amounts
+			string sumQuery = @"
+            SELECT
+                SUM(BNB) AS Sum_BNB,
+                SUM(USDT) AS Sum_USDT,
+                SUM(BTC) AS Sum_BTC,
+                SUM(XRP) AS Sum_XRP,
+                SUM(SOL) AS Sum_SOL,
+                SUM(ETH) AS Sum_ETH,
+                (SUM(BNB) + SUM(USDT) + SUM(BTC) + SUM(XRP) + SUM(SOL) + SUM(ETH)) AS Total_Sum
+            FROM
+                UserAmounts
+            WHERE
+                user_id = @User_Id
+				AND `date` >= NOW() - INTERVAL 30 DAY
+			GROUP BY
+				user_id";
+
+
+			MySqlCommand sumCommand = new MySqlCommand(sumQuery, connection);
+			sumCommand.Parameters.AddWithValue("@User_Id", StGlobal.Id);
+			MySqlDataReader sumReader = sumCommand.ExecuteReader();
+
+			if (sumReader.HasRows)
+			{
+				while (sumReader.Read())
+				{
+					CCAmount.BNB30DaysAmount = sumReader.GetDecimal(sumReader.GetOrdinal("Sum_BNB"));
+					CCAmount.USDT30DaysAmount = sumReader.GetDecimal(sumReader.GetOrdinal("Sum_USDT"));
+					CCAmount.BTC30DaysAmount = sumReader.GetDecimal(sumReader.GetOrdinal("Sum_BTC"));
+					CCAmount.XRP30DaysAmount = sumReader.GetDecimal(sumReader.GetOrdinal("Sum_XRP"));
+					CCAmount.SOL30DaysAmount = sumReader.GetDecimal(sumReader.GetOrdinal("Sum_SOL"));
+					CCAmount.ETH30DaysAmount = sumReader.GetDecimal(sumReader.GetOrdinal("Sum_ETH"));
+					CCAmount.total30DaysAmount = sumReader.GetDecimal(sumReader.GetOrdinal("Total_Sum"));
+				}
+			}
+			sumReader.Close();
+		}
+	}
+
+	public void getallAmount()
+	{
+		using (MySqlConnection connection = StGlobal.GetSqlConnection())
+		{
+			connection.Open();
+			// Query to sum up all amounts
+			string sumQuery = @"
+            SELECT
+                (SUM(BNB) + SUM(USDT) + SUM(BTC) + SUM(XRP) + SUM(SOL) + SUM(ETH)) AS Total_Sum
+            FROM
+                UserAmounts
+            WHERE
+                user_id = @User_Id
+			GROUP BY
+				user_id";
+
+
+			MySqlCommand sumCommand = new MySqlCommand(sumQuery, connection);
+			sumCommand.Parameters.AddWithValue("@User_Id", StGlobal.Id);
+			MySqlDataReader sumReader = sumCommand.ExecuteReader();
+
+			if (sumReader.HasRows)
+			{
+				while (sumReader.Read())
+				{
+					CCAmount.totalAmount = sumReader.GetDecimal(sumReader.GetOrdinal("Total_Sum"));
+				}
+			}
+			sumReader.Close();
+		}
+	}
+
+
+	private void GetWallets()	
+	{
+		Wallets.Clear();
+
+		using (MySqlConnection connection = StGlobal.GetSqlConnection())
+		{
+			connection.Open();
+
+			string query = "SELECT Seed_Phrase, Blockchain, Amount, Licence,Id FROM ManageWallets WHERE User_Id = @User_Id";
+			MySqlCommand command = new MySqlCommand(query, connection);
+			command.Parameters.AddWithValue("@User_Id",StGlobal.Id);
+			MySqlDataReader reader = command.ExecuteReader();
+			if (reader.HasRows)
+			{
+				while (reader.Read())
+				{
+					Wallets.Add(new Wallet
+						{
+							SeedPhrase = reader.GetString(reader.GetOrdinal("Seed_Phrase")),
+							Blockchain = reader.GetString(reader.GetOrdinal("Blockchain")),
+							Amount = reader.GetString(reader.GetOrdinal("Amount")),
+							Licence = reader.GetString(reader.GetOrdinal("Licence")),
+							Id = reader.GetInt32(reader.GetOrdinal("Id"))
+						});
+				}
+			}
+		}
+	}
+
+
+
+	public static List<UserAmount> GetUserAmounts()
+	{
+		var userAmounts = new List<UserAmount>();
+
+		using (MySqlConnection connection = StGlobal.GetSqlConnection())
+		{
+			connection.Open();
+			string query = "SELECT * FROM UserAmounts WHERE user_id = @User_Id GROUP BY date";
+			MySqlCommand command = new MySqlCommand(query, connection);
+			command.Parameters.AddWithValue("@User_Id", StGlobal.Id);
+			using (MySqlDataReader reader = command.ExecuteReader())
+			{
+				while (reader.Read())
+				{
+					userAmounts.Add(new UserAmount
+						{
+							Id = reader.GetInt32("Id"),
+							UserId = reader.GetInt32("user_id"),
+							BNB = reader.IsDBNull("BNB") ? 0 : reader.GetInt32("BNB"),
+							ETH = reader.IsDBNull("ETH") ? 0 : reader.GetInt32("ETH"),
+							SOL = reader.IsDBNull("SOL") ? 0 : reader.GetInt32("SOL"),
+							BTC = reader.IsDBNull("BTC") ? 0 : reader.GetInt32("BTC"),
+							USDT = reader.IsDBNull("USDT") ? 0 : reader.GetInt32("USDT"),
+							XRP = reader.IsDBNull("XRP") ? 0 : reader.GetInt32("XRP"),
+							Date = reader.GetDateTime("date")
+						});
+				}
+			}
+		}
+
+		return userAmounts;
+	}
+	public static Root TransformData(List<UserAmount> userAmounts)
+	{
+		var today = userAmounts.Where(x => x.Date.Date == DateTime.Today).ToList();
+		var last7Days = userAmounts.Where(x => x.Date.Date >= DateTime.Today.AddDays(-7)).ToList();
+		var last30Days = userAmounts.Where(x => x.Date.Date >= DateTime.Today.AddDays(-30)).ToList();
+		var last6Months = userAmounts.Where(x => x.Date.Date >= DateTime.Today.AddMonths(-6)).ToList();
+		var lastYear = userAmounts.Where(x => x.Date.Date >= DateTime.Today.AddYears(-1)).ToList();
+
+		return new Root
+			{
+				dates = new Dates
+				{
+					today = new TimePeriod
+					{
+						total = today.Sum(x => x.BNB + x.ETH + x.SOL + x.BTC + x.USDT + x.XRP),
+						upDown = 2.2, // Replace with actual logic
+						data = new Data
+						{
+							labels = Enumerable.Range(0, 24).Select(i => $"{i}am").ToList(),
+							income = today.Select(x => x.BNB + x.ETH + x.SOL + x.BTC + x.USDT + x.XRP).ToList(),
+							expenses = [1157, 449, 835, 1631, 671, 1202, 1311, 1640, 1843, 839, 2234, 1294, 809, 1241, 1437, 694, 1145, 785, 2006, 788, 893, 1271, 1058, 1798]
+						}
+					},
+					sevendays = new TimePeriod
+					{
+						total = last7Days.Sum(x => x.BNB + x.ETH + x.SOL + x.BTC + x.USDT + x.XRP),
+						upDown = 1, // Replace with actual logic
+						data = new Data
+						{
+							labels = new List<string> { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" },
+							income = last7Days.Select(x => x.BNB + x.ETH + x.SOL + x.BTC + x.USDT + x.XRP).ToList(),
+							expenses = [12254, 12947, 4417, 7137, 12364, 3339, 11704]
+						}
+					},
+					thirtydays = new TimePeriod
+					{
+						total = last30Days.Sum(x => x.BNB + x.ETH + x.SOL + x.BTC + x.USDT + x.XRP),
+						upDown = 1.3, // Replace with actual logic
+						data = new Data
+						{
+							labels = Enumerable.Range(1, 30).Select(x => $"{x}th").ToList(),
+							income = last30Days.Select(x => x.BNB + x.ETH + x.SOL + x.BTC + x.USDT + x.XRP).ToList(),
+							expenses = [52174, 52963, 22612, 63412, 17530, 20916, 54547, 47039, 25927, 55881, 62086, 31284, 29107, 36593, 16160, 31844, 39048, 23332, 32513, 27545, 45667, 18338, 30762, 40345, 46277, 58295, 32283, 66816, 48612, 18043]
+						}
+					},
+					sixmonths = new TimePeriod
+					{
+						total = last6Months.Sum(x => x.BNB + x.ETH + x.SOL + x.BTC + x.USDT + x.XRP),
+						upDown = -1, // Replace with actual logic
+						data = new Data
+						{
+							labels = new List<string> { "Feb", "Mar", "Apr", "May", "Jun", "Jul" },
+							income = last6Months.Select(x => x.BNB + x.ETH + x.SOL + x.BTC + x.USDT + x.XRP).ToList(),
+							expenses = [28399, 51685, 65043, 50953, 23260, 28851]
+						}
+					},
+					year = new TimePeriod
+					{
+						total = lastYear.Sum(x => x.BNB + x.ETH + x.SOL + x.BTC + x.USDT + x.XRP),
+						upDown = 9.8, // Replace with actual logic
+						data = new Data
+						{
+							labels = new List<string> { "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul" },
+							income = lastYear.Select(x => x.BNB + x.ETH + x.SOL + x.BTC + x.USDT + x.XRP).ToList(),
+							expenses = [51205, 42756, 42415, 29509, 54806, 55302, 66130, 38933, 17552, 49024, 26006, 64828]
+						}
+					}
+				}
+			};
+	}
+}
+<script>
+	// Get references to elements
+	const openModalButton = document.getElementById('openModalButton');
+	const formOpenModalButton = document.getElementById('formOpenModalButton');
+	const closeModalButton = document.getElementById('cancelButton');
+	const formCloseModalButton = document.getElementById('formCancelButton');
+	const modal = document.getElementById('modal');
+	const modal1 = document.getElementById('formModal');
+
+	// Function to open modal
+	function openModal() {
+		modal.classList.remove('hidden');
+	}
+
+	// Function to close modal
+	function closeModal() {
+		modal.classList.add('hidden');
+	}
+
+	function openModal1() {
+		modal1.classList.remove('hidden');
+	}
+
+	// Function to close modal
+	function closeModal1() {
+		modal1.classList.add('hidden');
+	}
+
+	// Event listeners to toggle modal visibility
+	openModalButton.addEventListener('click', openModal);
+	closeModalButton.addEventListener('click', closeModal);
+
+	formOpenModalButton.addEventListener('click', openModal1);
+	formCloseModalButton.addEventListener('click', closeModal1);
+</script>

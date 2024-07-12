@@ -1,0 +1,165 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\obj\\Release\\net8.0-android\\scopedcss\\bundle\\CryptoCoins.styles.css",
+      "PackagePath": "staticwebassets\\CryptoCoins.styles.css"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\css\\pages\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\pages\\dashboard.css"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\css\\pages\\launchpad.css",
+      "PackagePath": "staticwebassets\\css\\pages\\launchpad.css"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\css\\pages\\licencepage.css",
+      "PackagePath": "staticwebassets\\css\\pages\\licencepage.css"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\css\\pages\\subscriptions.css",
+      "PackagePath": "staticwebassets\\css\\pages\\subscriptions.css"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\ALL.png",
+      "PackagePath": "staticwebassets\\images\\ALL.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\CRlogo.png",
+      "PackagePath": "staticwebassets\\images\\CRlogo.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\addtocart.png",
+      "PackagePath": "staticwebassets\\images\\addtocart.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\basket (1).png",
+      "PackagePath": "staticwebassets\\images\\basket (1).png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\basket.png",
+      "PackagePath": "staticwebassets\\images\\basket.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\bnb b.png",
+      "PackagePath": "staticwebassets\\images\\bnb b.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\bnb.png",
+      "PackagePath": "staticwebassets\\images\\bnb.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\bnbb.png",
+      "PackagePath": "staticwebassets\\images\\bnbb.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\btc copia.png",
+      "PackagePath": "staticwebassets\\images\\btc copia.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\btc.png",
+      "PackagePath": "staticwebassets\\images\\btc.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\btccopia.png",
+      "PackagePath": "staticwebassets\\images\\btccopia.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\coin.png",
+      "PackagePath": "staticwebassets\\images\\coin.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\dollar (1).png",
+      "PackagePath": "staticwebassets\\images\\dollar (1).png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\dollar (2).png",
+      "PackagePath": "staticwebassets\\images\\dollar (2).png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\dollar.png",
+      "PackagePath": "staticwebassets\\images\\dollar.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\eth.png",
+      "PackagePath": "staticwebassets\\images\\eth.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\favicon.jpg",
+      "PackagePath": "staticwebassets\\images\\favicon.jpg"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\logo.jpg",
+      "PackagePath": "staticwebassets\\images\\logo.jpg"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\open-box.png",
+      "PackagePath": "staticwebassets\\images\\open-box.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\price.png",
+      "PackagePath": "staticwebassets\\images\\price.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\sol2.png",
+      "PackagePath": "staticwebassets\\images\\sol2.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\sun.png",
+      "PackagePath": "staticwebassets\\images\\sun.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\usdt copia.png",
+      "PackagePath": "staticwebassets\\images\\usdt copia.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\usdt.png",
+      "PackagePath": "staticwebassets\\images\\usdt.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\usdtcopia.png",
+      "PackagePath": "staticwebassets\\images\\usdtcopia.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\images\\xrp.png",
+      "PackagePath": "staticwebassets\\images\\xrp.png"
+    },
+    {
+      "Id": "E:\\fiverr\\code\\mark n\\latest\\1\\CryptoCoins_28May\\CryptoCoins\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Release\\net8.0-android\\staticwebassets\\msbuild.CryptoCoins.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0-android\\staticwebassets\\msbuild.build.CryptoCoins.props",
+      "PackagePath": "build\\CryptoCoins.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0-android\\staticwebassets\\msbuild.buildMultiTargeting.CryptoCoins.props",
+      "PackagePath": "buildMultiTargeting\\CryptoCoins.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0-android\\staticwebassets\\msbuild.buildTransitive.CryptoCoins.props",
+      "PackagePath": "buildTransitive\\CryptoCoins.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

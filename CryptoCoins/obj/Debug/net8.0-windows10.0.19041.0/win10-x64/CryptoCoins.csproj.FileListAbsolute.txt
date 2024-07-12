@@ -1,0 +1,435 @@
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.csproj.AssemblyReference.cache
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.build.json
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.development.json
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.CryptoCoins.Microsoft.AspNetCore.StaticWebAssets.props
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.build.CryptoCoins.props
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.buildMultiTargeting.CryptoCoins.props
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.buildTransitive.CryptoCoins.props
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.pack.json
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\CryptoCoins.styles.css
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\CryptoCoins.bundle.scp.css
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.publish.json
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.inputs
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauifont.inputs
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauisplash.inputs
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauimanifest.stamp
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.i.cs
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.cs
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlTypeInfo.g.cs
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xaml
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlSaveStateFile.xml
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.exe
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.deps.json
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.runtimeconfig.json
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.pdb
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BouncyCastle.Cryptography.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Google.Protobuf.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\K4os.Compression.LZ4.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\K4os.Compression.LZ4.Streams.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\K4os.Hash.xxHash.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Authorization.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.Forms.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.Web.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.WebView.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.WebView.Maui.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Metadata.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Binder.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Json.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.FileProviders.Composite.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.FileProviders.Physical.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Logging.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Logging.Abstractions.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Logging.Debug.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Options.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Primitives.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.Interop.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.JSInterop.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Controls.Compatibility.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Controls.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Controls.Xaml.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Essentials.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Graphics.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Win32.SystemEvents.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.InteractiveExperiences.Projection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WinUI.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AppLifecycle.Projection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AppNotifications.Builder.Projection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AppNotifications.Projection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.ApplicationModel.Resources.Projection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Management.Deployment.Projection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.PushNotifications.Projection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Security.AccessControl.Projection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Power.Projection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MySql.Data.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NBitcoin.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Configuration.ConfigurationManager.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Data.SqlClient.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Drawing.Common.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.IO.Pipelines.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Security.Cryptography.ProtectedData.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Security.Permissions.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Windows.Extensions.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ZstdSharp.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ca\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\cs\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\da\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\de\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\el\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\es\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\fi\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\fr\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\he\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\hi\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\hr\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\hu\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\id\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\it\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ja\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ko\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ms\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\nb\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\nl\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\pl\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\pt-BR\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\pt\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ro\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ru\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\sk\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\sv\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\th\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\tr\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\uk\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\vi\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\zh-HK\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\zh-Hans\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\zh-Hant\Microsoft.Maui.Controls.resources.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\comerr64.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\gssapi64.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\k5sprt64.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\krb5_64.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\krbcc64.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\sni.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.SDK.NET.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\WinRT.Runtime.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauisplash.stamp
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauifont.stamp
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\logo.scale-100.jpg
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.AssemblyInfoInputs.cache
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.AssemblyInfo.cs
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.csproj.CoreCompileInputs.cache
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlC.stamp
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCo.13815C32.Up2Date
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\refint\CryptoCoins.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.pdb
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.genruntimeconfig.cache
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ref\CryptoCoins.dll
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\priconfig.xml
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\priconfig.xml.intermediate
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\unfiltered.layout.resfiles
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\unfiltered.layout.resfiles.intermediate
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\filtered.layout.resfiles
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\filtered.layout.resfiles.intermediate
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\excluded.layout.resfiles
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\excluded.layout.resfiles.intermediate
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.resfiles
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.resfiles.intermediate
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\pri.resfiles
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\pri.resfiles.intermediate
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+D:\MyStuff_New\crpto\Fai\CryptoCoins-main\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.exe
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.deps.json
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.runtimeconfig.json
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.pdb
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BouncyCastle.Cryptography.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Google.Protobuf.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\K4os.Compression.LZ4.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\K4os.Compression.LZ4.Streams.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\K4os.Hash.xxHash.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.WebView.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.WebView.Maui.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.EntityFrameworkCore.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.Interop.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Controls.Compatibility.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Controls.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Controls.Xaml.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Essentials.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Graphics.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Win32.SystemEvents.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.InteractiveExperiences.Projection.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WinUI.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AppLifecycle.Projection.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AppNotifications.Builder.Projection.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.AppNotifications.Projection.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.ApplicationModel.Resources.Projection.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.PushNotifications.Projection.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Security.AccessControl.Projection.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Power.Projection.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Release.Net.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MySql.Data.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NBitcoin.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Configuration.ConfigurationManager.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Data.SqlClient.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Drawing.Common.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Security.Cryptography.ProtectedData.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Security.Permissions.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Windows.Extensions.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ZstdSharp.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ca\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\cs\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\da\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\de\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\el\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\es\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\fi\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\fr\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\he\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\hi\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\hr\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\hu\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\id\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\it\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ja\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ko\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ms\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\nb\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\nl\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\pl\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\pt-BR\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\pt\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ro\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ru\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\sk\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\sv\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\th\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\tr\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\uk\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\vi\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\zh-HK\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\zh-Hans\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\zh-Hant\Microsoft.Maui.Controls.resources.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\comerr64.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\gssapi64.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\k5sprt64.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\krb5_64.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\krbcc64.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\sni.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.SDK.NET.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\WinRT.Runtime.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.csproj.AssemblyReference.cache
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.build.json
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.development.json
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.CryptoCoins.Microsoft.AspNetCore.StaticWebAssets.props
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.build.CryptoCoins.props
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.buildMultiTargeting.CryptoCoins.props
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.buildTransitive.CryptoCoins.props
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.pack.json
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\CryptoCoins.styles.css
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\CryptoCoins.bundle.scp.css
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.publish.json
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.inputs
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauifont.inputs
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauisplash.inputs
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauimanifest.stamp
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.i.cs
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.cs
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlTypeInfo.g.cs
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xaml
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlSaveStateFile.xml
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.GeneratedMSBuildEditorConfig.editorconfig
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauisplash.stamp
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauifont.stamp
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\logo.scale-100.jpg
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.AssemblyInfoInputs.cache
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.AssemblyInfo.cs
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.csproj.CoreCompileInputs.cache
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlC.stamp
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.csproj.CopyComplete
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\refint\CryptoCoins.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.pdb
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\CryptoCoins.genruntimeconfig.cache
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ref\CryptoCoins.dll
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\priconfig.xml
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\priconfig.xml.intermediate
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\unfiltered.layout.resfiles
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\unfiltered.layout.resfiles.intermediate
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\filtered.layout.resfiles
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\filtered.layout.resfiles.intermediate
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\excluded.layout.resfiles
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\excluded.layout.resfiles.intermediate
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.resfiles
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.resfiles.intermediate
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\pri.resfiles
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\pri.resfiles.intermediate
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NowPayments.Net.Objects.dll

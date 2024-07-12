@@ -1,0 +1,716 @@
+﻿@page "/licence";
+@using CryptoCoins.Helpers
+@using CryptoCoins.Services
+@using MySql.Data.MySqlClient
+@inject IJSRuntime JSRuntime
+@using System.Text
+@using CryptoCoins.Models
+@using System.Diagnostics
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Linq;
+@inject PackagesService PackagesService
+@using NowPayments.Net.Objects;
+
+<div class="dashboard">
+    <duv class="head-home crypto-heading">
+        <h4 class="heading">License Key Plans</h4>
+    </duv>
+   @*  <div>
+        <input class="heading" @bind="subscriptionMessage" style="background-color:#121218" />
+    </div> *@
+    @* <div class="text-center mt-4 py-4 rounded-md" style="background-color:#383838;padding:0 20px;"> *@
+    <div class="text-center mt-4 py-4 rounded-md" style="display:flex;justify-content:space-between;background-color:#383838;padding:0 20px;">
+        <p class="font-bold">After payment, your licence key will be available for download!</p>
+        <p id="formOpenModalButton" @onclick="getLicence" class="font-bold cursor-pointer text-decoration-underline formOpenModalButton">licence key</p>
+    </div>
+    <div class="sm:flex sm:flex-col sm:align-center mt-4">
+        <div class="sm:space-y-0 sm:grid sm:grid-cols-3 sm:gap-3 md:max-w-7xl xl:grid-cols-3">
+            <div class="w-full rounded-lg shadow-sm" style="border:1px solid #4f5054;background: radial-gradient(401px at 65.6% -0.3%, rgba(215, 204, 150) 1.2%, rgb(56, 56, 56) 22%);">
+
+                <p style="width:75px;background-color:#f1b90c;border-radius:10px;color:black">@discountbnb% off</p>
+                <div class="p-3 flex justify-content-start gap-3 items-center">
+                    <div>
+                        <h2 class="text-black px-1 inline-block" style="font-size:10px;background-color:#f1b90c;border-radius:10px;"></h2>
+                        <p class="mt-3 ml-1 text-base text-slate-700 leading-tight">
+                            Binance
+                        </p>
+                        <p class="">
+                            <span class="text-5xl font-bold text-slate-900 tracking-tighter">BNB</span>
+                        </p>
+                    </div>
+                    <div>
+                        <img src="images/bnbb.png" alt="btc" width="100" height="100" />
+                    </div>
+                </div>
+                <div id="formOpenModalButton" class="flex justify-center items-center gap-1 mx-3 py-2 formOpenModalButton" style="background-color:#f1b90c;border:1px solid #f1b90c;border-radius:10px;cursor:pointer"
+                     @onclick="PurchaseBNB">
+                    <img src="images/addtocart.png" alt="add to cart" height="25" width="25" />
+                    @* <img src="images/price.png" alt="dollar" height="20" width="20" /> *@
+                    <p class="font-bold text-1xl text-black">$ @BnbPerMonth/Month</p>
+                </div>
+                <div class="mx-4 mt-3 mb-5 flex flex-col gap-1 justify-content-start">
+                    <p class="text-base text-gray-100 font-semibold">Monthly License</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">Full Access</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">No Search Limit</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">Analytics</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold" style="color:#f1b90c">Search Speed: 1.0x</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">24/7 Support</p>
+                </div>
+            </div>
+            <div class="w-full rounded-lg shadow-sm" style="border:1px solid #4f5054;background: radial-gradient(401px at 65.6% -0.3%, rgba(215, 215, 215) 1.2%, rgb(56, 56, 56) 22%);">
+                <p style="width:75px;background-color:#eaf0f0;border-radius:10px;color:black">@discounteth% off</p>
+                <div class="p-3 flex justify-content-start gap-3 items-center">
+                   
+                    <div>
+                        <h2 class="text-black px-1 inline-block" style="font-size:10px;background-color:#eaf0f0;border-radius:10px;"></h2>
+                        <p class="mt-3 ml-1 text-base text-slate-700 leading-tight">
+                            Ethereum
+                        </p>
+                        <p class="">
+                            <span class="text-5xl font-bold text-slate-900 tracking-tighter">ETH</span>
+                        </p>
+                    </div>
+                    <div>
+                        <img src="images/eth.png" alt="btc" width="100" height="100" />
+                    </div>
+                </div>
+                <div id="formOpenModalButton" class="flex justify-center items-center gap-1 mx-3 py-2 formOpenModalButton" style="background-color:#eaf0f0;border:1px solid #eaf0f0;border-radius:10px;cursor:pointer"
+                     @onclick="PurchaseETH">
+                    <img src="images/addtocart.png" alt="add to cart" height="25" width="25" />
+                    @* <img src="images/price.png" alt="dollar" height="20" width="20" /> *@
+                    <p class="font-bold text-1xl text-black">$ @EthPerMonth/Month</p>
+                </div>
+                <div class="mx-4 mt-3 mb-5 flex flex-col gap-1 justify-content-start">
+                    <p class="text-base mt-1 text-gray-100 font-semibold">Monthly License</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">Full Access</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">No Search Limit</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">Analytics</p>
+                    <p class="text-base mt-1 font-semibold" style="color:#9c9c9b">Search Speed: 1.5x</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">24/7 Support</p>
+                    <p class="text-base mt-1 font-semibold" style="color:#9c9c9b">More profitable than BNB</p>
+                </div>
+            </div>
+            <div class="w-full rounded-lg shadow-sm" style="border:1px solid #4f5054;background: radial-gradient(401px at 65.6% -0.3%, rgba(232, 183, 110) 1.2%, rgb(56, 56, 56) 22%);">
+                <p style="width:75px;background-color:#fb921c;border-radius:10px;color:black">@discountbtc% off</p>
+                <div class="p-3 flex justify-content-start gap-3 items-center">
+                    
+                    <div>
+                        <h2 class="text-black px-1 inline-block" style="font-size:10px;background-color:#fb921c;border-radius:10px;"></h2>
+                        <p class="mt-3 ml-1 text-base text-slate-700 leading-tight">
+                            Bitcoin
+                        </p>
+                        <p class="">
+                            <span class="text-5xl font-bold text-slate-900 tracking-tighter">BTC</span>
+                        </p>
+                    </div>
+                    <div>
+                        <img src="images/btc.png" alt="btc" width="100" height="100" />
+                    </div>
+                </div>
+                <div id="formOpenModalButton" class="flex justify-center items-center gap-1 mx-3 py-2 formOpenModalButton" style="background-color:#fb921c;border:1px solid #fb921c;border-radius:10px;cursor:pointer"
+                     @onclick="PurchaseBTC">
+                    <img src="images/addtocart.png" alt="add to cart" height="25" width="25" />
+                    @* <img src="images/price.png" alt="dollar" height="20" width="20" /> *@
+                    <p class="font-bold text-1xl text-black">$ @BtcPerMonth/Month</p>
+                </div>
+                <div class="mx-4 mt-3 mb-5 flex flex-col gap-1 justify-content-start">
+                    <p class="text-base text-gray-100 font-semibold">Monthly License</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">Full Access</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">No Search Limit</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">Analytics</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold" style="color:#fb921c">Search Speed: 2x</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">24/7 Support</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold" style="color:#fb921c">More profitable than BNB and ETH</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col rounded-lg align-center mt-4 py-4" style="border:1px solid #4f5054;background-color:#383838;">
+        <p style="width:75px;background-color:#ffa939;border-radius:10px;color:black">@discountall% off</p>
+        <div class="flex flex-col justify-center items-center">
+            
+            <div class="flex justify-center items-center gap-10">
+                
+                <div class="">
+                    <img src="images/ALL.png" alt="all chain" width="300" height="300" />
+                </div>
+                <div class="flex flex-col justify-center items-center w-full">
+                    <p class="mx-3 text-4xl font-bold">ALL Chains</p>
+                    <div class="flex justify-center items-center gap-1 mx-3 py-2 mt-3 w-100" style="background: linear-gradient(to right, #ffa939, #ffca33);border:1px solid #ffa939;border-radius:10px;cursor:pointer"
+                         @onclick="Purchase">
+                        <img src="images/addtocart.png" alt="add to cart" height="25" width="25" />
+                        @* <img src="images/price.png" alt="dollar" height="20" width="20" /> *@
+                        <p class="font-bold text-1xl text-black">$ @AllCoinsPerMonth/Month</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center gap-5">
+                <div class="mx-4 mt-6 mb-5 flex flex-col gap-1 justify-content-start">
+                    <p class="text-base text-gray-100 font-semibold">Monthly License</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">Full Access</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">No Search Limit</p>
+                    <p class="text-base mt-1 text-gray-100 font-semibold">Analytics</p>
+                    <ul class="mt-1 flex -ml-9 flex-col space-y-2">
+                        <li class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" aria-hidden="true" class="mr-2 h-auto w-6 sm:w-7" style="color:#ffa939;">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z">
+                                </path>
+                            </svg>
+                            <p class="text-base font-semibold" style="color:#ffa939;">6 selectable Blockchains</p>
+                        </li>
+                        <li class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" aria-hidden="true" class="mr-2 h-auto w-6 sm:w-7" style="color:#ffa939;">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z">
+                                </path>
+                            </svg>
+                            <p class="text-base font-semibold" style="color:#ffa939;">Search Speed: 3x</p>
+                        </li>
+                        <li class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" aria-hidden="true" class="mr-2 h-auto w-6 sm:w-7" style="color:#ffa939;">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z">
+                                </path>
+                            </svg>
+                            <p class="text-base font-semibold" style="color:#ffa939;">24/7 Premium Support</p>
+                        </li>
+                        <li class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" aria-hidden="true" class="mr-2 h-auto w-6 sm:w-7" style="color:#ffa939;">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z">
+                                </path>
+                            </svg>
+                            <p class="text-base font-semibold" style="color:#ffa939;">The most Profitable</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="mx-3 text-3xl font-semibold mb-2">Available Blockchains</p>
+                    <div class="w-full">
+                        <div class="flex justify-around items-center gap-2 mb-2">
+                            <img src="images/btc.png" alt="bnb" width="100" height="100" />
+                            <img src="images/eth.png" alt="bnb" width="100" height="100" />
+                            <img src="images/bnbb.png" alt="bnb" width="100" height="100" />
+                        </div>
+                        <div class="flex justify-around items-center gap-4 mb-2">
+                            <img src="images/sol2.png" alt="bnb" width="100" height="100" />
+                            <img src="images/usdtcopia.png" alt="bnb" width="100" height="100" />
+                            <img src="images/xrp.png" alt="bnb" width="100" height="100" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="formModal" class="modal fixed w-full h-full top-0 left-0 flex items-center justify-center hidden">
+    <!-- Overlay -->
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+    <div class="modal-container w-1/2 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+        <!-- Modal content -->
+        <div class="modal-content text-white py-4 text-left px-6" style="background-color:#383838;">
+            <div class="form-group" style="margin: 10px;">
+                <label>Purchase successfully.</label>
+                <input id="subscriptionKey" type="text" class="form-control" @bind="subscriptionKey" />
+            </div>
+            <div class="form-group" style="margin: 10px;">
+                <td>
+                    <button class="btn btn-warning" @onclick="CopySubscriptionKey">Copy</button>
+                    <button id="formCancelButton" class="btn btn-danger formCancelButton">Cancel</button>
+                </td>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+        #region ModalPopup
+        // Get references to elements
+    private const string FormOpenModalButtonId = "formOpenModalButton";
+    private const string FormCloseModalButtonId = "formCancelButton";
+    private static readonly HttpClient client = new HttpClient();
+    [Inject]
+    private NavigationManager Navigation { get; set; }
+
+    // Function to open modal
+    private void OpenModal1()
+    {
+        JSRuntime.InvokeVoidAsync("openModal1");
+    }
+
+    // Function to close modal
+    private void CloseModal1()
+    {
+        JSRuntime.InvokeVoidAsync("closeModal1");
+    }
+    public static void OpenBrowser(string url)
+    {
+        try
+        {
+            Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Failed to open URL: {ex.Message}");
+        }
+    }
+    public async void getLicence()
+    {
+        using (MySqlConnection connection = StGlobal.GetSqlConnection())
+        {
+            connection.Open();
+
+            string query = @"
+                SELECT Subscription_Key, Id, Subscription_Duration, subscription_name, Amount, user_id
+                FROM Subscriptions
+                WHERE user_id = @userId
+                ORDER BY Id DESC
+                LIMIT 1";
+
+            using (MySqlCommand command = new MySqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@userId", StGlobal.Id);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        subscriptionKey = reader["Subscription_Key"].ToString();
+                        int id = Convert.ToInt32(reader["Id"]);
+                        string subscriptionDuration = reader["Subscription_Duration"].ToString();
+                        string subscriptionName = reader["subscription_name"].ToString();
+                        decimal amount = Convert.ToDecimal(reader["Amount"]);
+                        int userIdFromDb = Convert.ToInt32(reader["user_id"]);
+                        PackagesService.AddName(subscriptionName);
+                    }
+                    else
+                    {
+                        Console.WriteLine("No subscription found");
+                    }
+                }
+            }
+        }
+    }
+
+    // private bool _eventListenersAdded = false;
+
+    // protected override void OnAfterRender(bool firstRender)
+    // {
+    //     if (!_eventListenersAdded)
+    //     {
+    //         _eventListenersAdded = true;
+    //         AddEventListeners();
+    //     }
+    // }
+
+    // private void AddEventListeners()
+    // {
+    //     JSRuntime.InvokeVoidAsync("eval", @"
+    //         const formOpenModalButtons = document.querySelectorAll('.btn-warning');
+    //         const formCloseModalButtons = document.querySelectorAll('.btn-danger');
+
+    //         formOpenModalButtons.forEach((button, index) => {
+    //             button.addEventListener('click', () => openModal1(index + 1));
+    //         });
+
+    //         formCloseModalButtons.forEach(button => {
+    //             button.addEventListener('click', closeModal1);
+    //         });
+    //     ");
+    // }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("eval", @"
+                const formOpenModalButtons = document.querySelectorAll('.formOpenModalButton');
+                const formCloseModalButton = document.querySelector('.formCancelButton');
+                const modal1 = document.querySelector('#formModal');
+
+                formOpenModalButtons.forEach(button => {
+                    button.addEventListener('click', openModal1);
+                });
+
+                formCloseModalButton.addEventListener('click', closeModal1);
+
+                function openModal1(event) {
+                    // Get the index of the button that was clicked
+                    const index = Array.from(formOpenModalButtons).indexOf(event.target);
+                    modal1.classList.remove('hidden');
+                    // Pass the index to your JavaScript function to handle specific modal content
+                    showModalContent(index);
+                }
+
+                function closeModal1() {
+                    modal1.classList.add('hidden');
+                }
+
+                function showModalContent(index) {
+                    // Customize modal content based on the index
+                    // You can use this function to show different content for each modal
+                }
+            ");
+        }
+    }
+
+    #endregion
+    private string subscriptionMessage = string.Empty;
+    string BtcPerMonth = "BTC - 150";
+    string EthPerMonth = "ETH - 300";
+    string BnbPerMonth = "BNB - 250";
+    string AllCoinsPerMonth = "ALL COINS - 699";
+    double discountbtc = 0.0;
+    double discountbnb = 0.0;
+    double discounteth = 0.0;
+    double discountall = 0.0;
+
+    protected override void OnInitialized()
+    {
+        PackagesService.OnChange += StateHasChanged;
+        subscriptionMessage = string.Empty;
+        GetPerMonthPrice();
+    }
+
+    private void GetPerMonthPrice()
+    {
+        using (MySqlConnection connection = StGlobal.GetSqlConnection())
+        {
+            connection.Open();
+
+            string query = "SELECT CoinName, Amount, Duration,Id FROM ManageSubscriptions";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            //command.Parameters.AddWithValue("@User_Id", StGlobal.Id);
+            MySqlDataReader reader = command.ExecuteReader();
+            //Amount = ExtractDigits(reader.GetString(reader.GetOrdinal("Amount"))),
+            while (reader.Read())
+            {
+                switch (reader.GetString(reader.GetOrdinal("CoinName")))
+                {
+                    case "BTC":
+                        BtcPerMonth = ExtractDigits(reader.GetString(reader.GetOrdinal("Amount")));
+                        break;
+                    case "ETH":
+                        EthPerMonth = ExtractDigits(reader.GetString(reader.GetOrdinal("Amount")));
+                        break;
+                    case "BNB":
+                        BnbPerMonth = ExtractDigits(reader.GetString(reader.GetOrdinal("Amount")));
+                        break;
+                    case "ALL COINS":
+                        AllCoinsPerMonth = ExtractDigits(reader.GetString(reader.GetOrdinal("Amount")));
+                        break;
+                }
+            }
+        }
+        discountbtc = Math.Round((1 - (double.Parse(BtcPerMonth) / 400)) * 100,1);
+        discountbnb = Math.Round((1 - (double.Parse(BnbPerMonth) / 250)) * 100, 1);
+        discounteth = Math.Round((1 - (double.Parse(EthPerMonth) / 300)) * 100, 1);
+        discountall = Math.Round((1 - (double.Parse(AllCoinsPerMonth)) / 899) * 100, 1);
+    }
+
+    private string ExtractDigits(string input)
+    {
+        StringBuilder digits = new StringBuilder();
+        foreach (char c in input)
+        {
+            if (char.IsDigit(c))
+            {
+                digits.Append(c);
+            }
+        }
+        return digits.ToString();
+    }
+
+    private string subscriptionKey = string.Empty;
+    private string subscriptionDuration = string.Empty;
+
+    private async void Purchase(MouseEventArgs e)
+    {
+        subscriptionKey = Guid.NewGuid().ToString("N");
+        subscriptionDuration = "1 Month";
+        string name = "All Coins";
+
+        if (AllCoinsPerMonth == "699")
+        {
+            // string url = "https://nowpayments.io/payment/?iid=5311658570";
+            // // string url1 = "https://www.google.com";
+            // // Navigation.NavigateTo($"/webview?url={Uri.EscapeDataString(url1)}");
+            // Process.Start(new ProcessStartInfo
+            //     {
+            //         FileName = url,
+            //         UseShellExecute = true
+            //     });
+            var client = new HttpClient();
+
+            var paymentData = new
+            {
+                title = "All chain subscription",
+                img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLQUQ6g6NjGqj3qncgsJGpxzzRrL_qDAc1qQ&s",
+                price = 699,
+                quantity = 1,
+                subscriptionKey = subscriptionKey,
+                subscriptionDuration = subscriptionDuration,
+                subscriptionName = name,
+                amount = 699,
+                userId = StGlobal.Id
+            };
+
+            var json = JsonConvert.SerializeObject(paymentData);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await client.PostAsync("http://localhost:3000/stripe/payment", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var responseString = await response.Content.ReadAsStringAsync();
+                Process.Start(new ProcessStartInfo
+                    {
+                        FileName = responseString,
+                        UseShellExecute = true
+                    });
+            }
+            else
+            {
+                Console.WriteLine("Error occurred while making the payment request.");
+            }
+        }
+        if (AllCoinsPerMonth == "799")
+        {
+            string url = "https://nowpayments.io/payment/?iid=5709656627";
+
+            // Open the URL in the default web browser
+
+            Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+        }
+        if (AllCoinsPerMonth == "899")
+        {
+            string url = "https://nowpayments.io/payment/?iid=4887746722";
+
+            // Open the URL in the default web browser
+
+            Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+        }
+
+        // PurachaseValueUpdate(name, AllCoinsPerMonth);
+    }
+    private void PurchaseBNB(MouseEventArgs e)
+    {
+        subscriptionKey = Guid.NewGuid().ToString("N");
+        subscriptionDuration = "1 Month";
+        string name = "BNB";
+        if (BnbPerMonth == "150")
+        {
+            string url = "https://nowpayments.io/payment/?iid=5624236042";
+
+            // Open the URL in the default web browser
+
+            Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+        }
+        if (BnbPerMonth == "200")
+        {
+            string url = "https://nowpayments.io/payment/?iid=5987580262";
+
+            // Open the URL in the default web browser
+
+            Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+        }
+        if (BnbPerMonth == "250")
+        {
+            string url = "https://nowpayments.io/payment/?iid=5469714636";
+
+            // Open the URL in the default web browser
+
+            Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+        }
+
+        PurachaseValueUpdate(name, BnbPerMonth);
+
+    }
+
+    public void PurachaseValueUpdate(string subscriptionName, string amount)
+    {
+        using (MySqlConnection connection = StGlobal.GetSqlConnection())
+        {
+            connection.Open();
+
+            // Construct the SQL insert query
+            string insertQuery = @"
+        INSERT INTO Subscriptions (Subscription_Key, Subscription_Duration, subscription_name, Amount, user_id)
+        VALUES (@SubscriptionKey, @SubscriptionDuration, @SubscriptionName, @Amount, @UserId);
+    ";
+
+            // Create the command with the SQL insert query
+            MySqlCommand command = new MySqlCommand(insertQuery, connection);
+
+            // Add parameters
+            command.Parameters.AddWithValue("@SubscriptionKey", subscriptionKey);
+            command.Parameters.AddWithValue("@SubscriptionDuration", subscriptionDuration);
+            command.Parameters.AddWithValue("@SubscriptionName", subscriptionName);
+            command.Parameters.AddWithValue("@Amount", ExtractDigits(amount));
+            command.Parameters.AddWithValue("@UserId", StGlobal.Id);
+
+            // Execute the SQL insert command
+            int rowsAffected = command.ExecuteNonQuery();
+        }
+        PackagesService.AddName(subscriptionName);
+    }
+
+    private void PurchaseBTC(MouseEventArgs e)
+    {
+        subscriptionKey = Guid.NewGuid().ToString("N");
+        subscriptionDuration = "1 Month";
+        string name = "BTC";
+
+        if (BtcPerMonth == "300")
+        {
+            string url = "https://nowpayments.io/payment/?iid=4466428674";
+
+            // Open the URL in the default web browser
+
+            Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+        }
+        if (BtcPerMonth == "350")
+        {
+            string url = "https://nowpayments.io/payment/?iid=6264915044";
+
+            // Open the URL in the default web browser
+
+            Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+        }
+        if (BtcPerMonth == "400")
+        {
+            string url = "https://nowpayments.io/payment/?iid=6066874482";
+
+            // Open the URL in the default web browser
+
+            Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+        }
+
+        PurachaseValueUpdate(name, BtcPerMonth);
+    }
+    private void PurchaseETH(MouseEventArgs e)
+    {
+        subscriptionKey = Guid.NewGuid().ToString("N");
+        subscriptionDuration = "1 Month";
+        string name = "ETH";
+
+        if (EthPerMonth == "200")
+        {
+            string url = "https://nowpayments.io/payment?iid=5987580262";
+
+            // Open the URL in the default web browser
+
+            Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+        }
+        if (EthPerMonth == "250")
+        {
+            string url = "https://nowpayments.io/payment?iid=5469714636";
+
+            // Open the URL in the default web browser
+
+            Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+        }
+        if (EthPerMonth == "300")
+        {
+            string url = "https://nowpayments.io/payment?iid=4466428674";
+
+            // Open the URL in the default web browser
+
+            Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+        }
+
+        PurachaseValueUpdate(name, EthPerMonth);
+    }
+
+    private async Task CopySubscriptionKey()
+    {
+        // // Get the reference to the entry (input) element
+        // var input = await JSRuntime.InvokeAsync<string>("eval", $"document.getElementById('subscriptionKeyEntry')");
+
+        // // Copy the value to the clipboard
+        // await JSRuntime.InvokeVoidAsync("navigator.clipboard.writeText", input);
+        if (string.IsNullOrEmpty(subscriptionKey))
+        {
+            JSRuntime.InvokeVoidAsync("alert", "You didn't purchase the subscription");
+        }
+        else
+        {
+            await Clipboard.SetTextAsync(subscriptionKey);
+            CloseModal1();
+        }
+    }
+}
+
+<script>
+
+    // Get references to elements
+    const formOpenModalButton = document.getElementById('formOpenModalButton');
+    const formCloseModalButton = document.getElementById('formCancelButton');
+    const modal1 = document.getElementById('formModal');
+
+    // Function to open modal
+    function openModal1() {
+        modal1.classList.remove('hidden');
+    }
+
+    // Function to close modal
+    function closeModal1() {
+        modal1.classList.add('hidden');
+    }
+
+    // Event listeners to toggle modal visibility
+    formOpenModalButton.addEventListener('click', openModal1);
+    formCloseModalButton.addEventListener('click', closeModal1);
+</script>

@@ -1,0 +1,548 @@
+﻿@page "/wallets"
+@inject IJSRuntime JSRuntime
+@using System.Collections.Generic
+@using MySql.Data.MySqlClient
+@using CryptoCoins.Helpers
+@using System.Globalization
+
+<div class="main-group" style="margin: 25px;">
+    <div class="form-group" style="margin: 10px;">
+        <label for="seedPhrase">Seed Phrase</label>
+        <input id="seedPhrase" type="text" class="form-control" @bind="SeedPhrase" />
+    </div>
+
+    <div class="form-group" style="margin: 10px;">
+        <label for="blockchain">Blockchain</label>
+        <select id="blockchain" class="form-control" @bind="SelectedBlockchain">
+            @foreach (var blockchain in Blockchains)
+            {
+                <option value="@blockchain">@blockchain</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group" style="margin: 10px;">
+        <label for="amount">Amount</label>
+        <input id="amount" type="text" class="form-control" @bind="Amount" />
+    </div>
+
+    <div class="form-group" style="margin: 10px;">
+        <label for="licence">Licence</label>
+        <select id="licence" class="form-control" @bind="SelectedLicence">
+            @foreach (var licence in Licences)
+            {
+                <option value="@licence">@licence</option>
+            }
+        </select>
+    </div>
+
+    <button type="button" class="add-button" @onclick="AddWallet"
+            style="margin: 10px;">
+        Add
+    </button>
+
+    @if (Wallets.Any())
+    {
+        <h4 style="margin: 10px;">Wallets</h4>
+        <table class="table">
+            <thead style="color: white;">
+                <tr>
+                    <th>Seed Phrase</th>
+                    <th>Blockchain</th>
+                    <th>Amount</th>
+                    <th>Licence</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var wallet in Wallets)
+                {
+                    <tr style="color: white;">
+                        <td>@wallet.SeedPhrase</td>
+                        <td>@wallet.Blockchain</td>
+                        <td>@wallet.Amount</td>
+                        <td>@wallet.Licence</td>
+                        <td>
+                            <button id="formOpenModalButton" class="btn btn-warning formOpenModalButton" @onclick="() => EditWallet(wallet)">Edit</button>
+                            <button class="btn btn-danger" @onclick="() => DeleteWallet(wallet)">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+<div id="formModal" class="modal fixed w-full h-full top-0 left-0 flex items-center justify-center hidden">
+    <!-- Overlay -->
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+    <div class="modal-container w-1/2 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+        <!-- Modal content -->
+        <div class="modal-content text-white py-4 text-left px-6" style="background-color:#383838;">
+            <div class="form-group" style="margin: 10px;">
+                <label for="seedPhrase">Seed Phrase</label>
+                <input id="seedPhrase" type="text" class="form-control" @bind="editSeedPhrase" />
+            </div>
+
+            <div class="form-group" style="margin: 10px;">
+                <label for="blockchain">Blockchain</label>
+                <select id="blockchain" class="form-control" @bind="editBlockchain">
+                    @foreach (var blockchain in Blockchains)
+                    {
+                        <option value="@blockchain">@blockchain</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group" style="margin: 10px;">
+                <label for="amount">Amount</label>
+                <input id="amount" type="text" class="form-control" @bind="editAmount" />
+            </div>
+
+            <div class="form-group" style="margin: 10px;">
+                <label for="licence">Licence</label>
+                <select id="licence" class="form-control" @bind="editLicence">
+                    @foreach (var licence in Licences)
+                    {
+                        <option value="@licence">@licence</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group" style="margin: 10px;">
+                <td>
+                    <button class="btn btn-warning" @onclick="() => UpdateWallet(editingWallet)">Update</button>
+                    <button id="formCancelButton" class="btn btn-danger formCancelButton">Cancel</button>
+                </td>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    #region ModalPopup
+    // Get references to elements
+    private const string FormOpenModalButtonId = "formOpenModalButton";
+    private const string FormCloseModalButtonId = "formCancelButton";
+
+    // Function to open modal
+    private void OpenModal1(int walletId)
+    {
+        JSRuntime.InvokeVoidAsync("openModal1", walletId);
+    }
+
+    // Function to close modal
+    private void CloseModal1()
+    {
+        JSRuntime.InvokeVoidAsync("closeModal1");
+    }
+
+    // private bool _eventListenersAdded = false;
+
+    // protected override void OnAfterRender(bool firstRender)
+    // {
+    //     if (!_eventListenersAdded)
+    //     {
+    //         _eventListenersAdded = true;
+    //         AddEventListeners();
+    //     }
+    // }
+
+    // private void AddEventListeners()
+    // {
+    //     JSRuntime.InvokeVoidAsync("eval", @"
+    //         const formOpenModalButtons = document.querySelectorAll('.btn-warning');
+    //         const formCloseModalButtons = document.querySelectorAll('.btn-danger');
+
+    //         formOpenModalButtons.forEach((button, index) => {
+    //             button.addEventListener('click', () => openModal1(index + 1));
+    //         });
+
+    //         formCloseModalButtons.forEach(button => {
+    //             button.addEventListener('click', closeModal1);
+    //         });
+    //     ");
+    // }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("eval", @"
+                const formOpenModalButtons = document.querySelectorAll('.formOpenModalButton');
+                const formCloseModalButton = document.querySelector('.formCancelButton');
+                const modal1 = document.querySelector('#formModal');
+
+                formOpenModalButtons.forEach(button => {
+                    button.addEventListener('click', openModal1);
+                });
+
+                formCloseModalButton.addEventListener('click', closeModal1);
+
+                function openModal1(event) {
+                    // Get the index of the button that was clicked
+                    const index = Array.from(formOpenModalButtons).indexOf(event.target);
+                    modal1.classList.remove('hidden');
+                    // Pass the index to your JavaScript function to handle specific modal content
+                    showModalContent(index);
+                }
+
+                function closeModal1() {
+                    modal1.classList.add('hidden');
+                }
+
+                function showModalContent(index) {
+                    // Customize modal content based on the index
+                    // You can use this function to show different content for each modal
+                }
+            ");
+        }
+    }
+
+    #endregion
+
+
+    private string SeedPhrase { get; set; }
+    private string SelectedBlockchain { get; set; }
+    private string Amount { get; set; }
+    private int User_Id { get; set; }
+    private string SelectedLicence { get; set; }
+
+    private Wallet editingWallet;
+    private string editSeedPhrase;
+    private string editBlockchain;
+    private int editId;
+    private string editAmount;
+    private string editLicence;
+
+    private List<string> Blockchains = new List<string> { "BTC", "BNB", "ETH", "SOL", "USDT", "XRP"};
+    private List<string> Licences = new List<string>();
+
+    private List<Wallet> Wallets = new List<Wallet>();
+
+    protected override void OnInitialized()
+    {
+        //_eventListenersAdded = false;
+        User_Id = StGlobal.Id;
+        GetLicences();
+        LoadWallets();
+    }
+
+    public void GetLicences()
+    {
+        Licences.Clear();
+
+        using (MySqlConnection connection = StGlobal.GetSqlConnection())
+        {
+            connection.Open();
+
+            string callProcedure = "CALL GetAllSubscriptionKeys()";
+            MySqlCommand command = new MySqlCommand(callProcedure, connection);
+
+            // Execute the stored procedure
+            MySqlDataReader reader = command.ExecuteReader();
+
+            // Read and process the retrieved data
+            if (reader.HasRows)
+            {
+                // Read and process the retrieved data
+                while (reader.Read())
+                {
+                    string subscriptionKey = reader.GetString(0);
+                    Licences.Add(subscriptionKey);
+                    // Console.WriteLine(subscriptionKey);
+                }
+            }
+            reader.Close();
+        }
+
+        if (Licences.Count>0)
+            SelectedLicence = Licences[0];
+    }
+
+    private void LoadWallets()
+    {
+        Wallets.Clear();
+
+        using (MySqlConnection connection = StGlobal.GetSqlConnection())
+        {
+            connection.Open();
+
+            string query = "SELECT Seed_Phrase, Blockchain, Amount, Licence,Id FROM ManageWallets";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            //command.Parameters.AddWithValue("@User_Id", StGlobal.Id);
+            MySqlDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Wallets.Add(new Wallet
+                        {
+                            SeedPhrase = reader.GetString(reader.GetOrdinal("Seed_Phrase")),
+                            Blockchain = reader.GetString(reader.GetOrdinal("Blockchain")),
+                            Amount = reader.GetString(reader.GetOrdinal("Amount")),
+                            Licence = reader.GetString(reader.GetOrdinal("Licence")),
+                            Id = reader.GetInt32(reader.GetOrdinal("Id"))
+                        });
+                }
+            }
+        }
+
+        //SelectedLicence = Licences[0];
+        SelectedBlockchain = Blockchains[0];
+        StateHasChanged();
+    }
+
+    private async void AddWallet()
+    {
+        if (!string.IsNullOrEmpty(SeedPhrase) && !string.IsNullOrEmpty(Amount))
+        {
+            using (MySqlConnection connection = StGlobal.GetSqlConnection())
+            {
+                await connection.OpenAsync();
+
+                using (MySqlTransaction transaction = await connection.BeginTransactionAsync())
+                {
+                    try
+                    {
+
+                        // Insert into ManageWallets table
+                        string callProcedure = "CALL InsertManageWallets(@SeedPhrase, @Blockchain, @Amount, @Licence)";
+                        MySqlCommand command = new MySqlCommand(callProcedure, connection, transaction);
+                        command.Parameters.AddWithValue("@SeedPhrase", SeedPhrase);
+                        command.Parameters.AddWithValue("@Blockchain", SelectedBlockchain);
+                        command.Parameters.AddWithValue("@Amount", Amount);
+                        command.Parameters.AddWithValue("@Licence", SelectedLicence);
+
+                        int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                        if (rowsAffected > 0)
+                        {
+
+                            // Retrieve User_Id based on SelectedLicence
+                            string selectUserIdQuery = "SELECT User_Id FROM ManageWallets WHERE Licence = @Licence LIMIT 1";
+                            MySqlCommand selectCommand = new MySqlCommand(selectUserIdQuery, connection, transaction);
+                            selectCommand.Parameters.AddWithValue("@Licence", SelectedLicence);
+
+                            object result = await selectCommand.ExecuteScalarAsync();
+                            if (result == null)
+                            {
+                                await transaction.RollbackAsync();
+                                await Application.Current.MainPage.DisplayAlert("Error", "No User_Id found for the selected licence.", "OK");
+                                return;
+                            }
+
+                            int userId = Convert.ToInt32(result);
+
+                            float bnb = 0;
+                            float eth = 0;
+                            float sol = 0;
+                            float btc = 0;
+                            float usdt = 0;
+                            float xrp = 0;
+                            DateTime date = DateTime.Now;
+                            // "BTC", "BNB", "ETH", "SOL", "USDT", "XRP"
+                            if (SelectedBlockchain == "BNB")
+                            {
+                                bnb = ParseString(Amount);
+                            }
+                            if (SelectedBlockchain == "BTC")
+                            {
+                                btc = ParseString(Amount);
+                            }
+                            if (SelectedBlockchain == "ETH")
+                            {
+                                eth = ParseString(Amount);
+                            }
+                            if (SelectedBlockchain == "SOL")
+                            {
+                                sol = ParseString(Amount);
+                            }
+                            if (SelectedBlockchain == "USDT")
+                            {
+                                usdt = ParseString(Amount);
+                            }
+                            if (SelectedBlockchain == "XRP")
+                            {
+                                xrp = ParseString(Amount);
+                            }
+
+                            string insertUserAmountsQuery = "INSERT INTO UserAmounts (user_id,BNB, ETH, SOL, BTC, USDT, XRP, date) VALUES (@UserId, @BNB, @ETH, @SOL, @BTC, @USDT, @XRP, @Date)";
+                            MySqlCommand userAmountsCommand = new MySqlCommand(insertUserAmountsQuery, connection, transaction);
+                            userAmountsCommand.Parameters.AddWithValue("@UserId", userId);
+                            userAmountsCommand.Parameters.AddWithValue("@BNB", bnb);
+                            userAmountsCommand.Parameters.AddWithValue("@ETH", eth);
+                            userAmountsCommand.Parameters.AddWithValue("@SOL", sol);
+                            userAmountsCommand.Parameters.AddWithValue("@BTC", btc);
+                            userAmountsCommand.Parameters.AddWithValue("@USDT", usdt);
+                            userAmountsCommand.Parameters.AddWithValue("@XRP", xrp);
+                            userAmountsCommand.Parameters.AddWithValue("@Date", date);
+
+                            await userAmountsCommand.ExecuteNonQueryAsync();
+
+                            // Commit transaction
+                            await transaction.CommitAsync();
+
+                            Wallets.Add(new Wallet
+                                {
+                                    SeedPhrase = SeedPhrase,
+                                    Blockchain = SelectedBlockchain,
+                                    Amount = Amount,
+                                    Licence = SelectedLicence
+                                });
+
+                            // Reset the fields after adding the wallet
+                            SeedPhrase = string.Empty;
+                            SelectedBlockchain = Blockchains[0];
+                            Amount = "";
+                            SelectedLicence = Licences[0];
+
+                            LoadWallets();
+                        }
+                        else
+                        {
+                            await transaction.RollbackAsync();
+                            await Application.Current.MainPage.DisplayAlert("Error", "Failed to add wallet.", "OK");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        await transaction.RollbackAsync();
+                        await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
+                    }
+                }
+            }
+        }
+        else
+        {
+            await Application.Current.MainPage.DisplayAlert("Message", "Please enter all details", "OK");
+        }
+    }
+    public static float ParseString(string input)
+    {
+        // Split the string at the tilde and trim any surrounding whitespace
+        string[] parts = input.Split('~');
+
+        if (parts.Length != 2)
+        {
+            Application.Current.MainPage.DisplayAlert("Amount Format", "0.06 ~ $226.27", "OK");
+        }
+
+        // Extract and parse the first float value
+        string firstPart = parts[0].Trim();
+        if (!float.TryParse(firstPart, NumberStyles.Float, CultureInfo.InvariantCulture, out float firstValue))
+        {
+            Application.Current.MainPage.DisplayAlert("Amount Format", "0.06 ~ $226.27", "OK");
+        }
+
+        // Extract and parse the second float value, removing the dollar sign
+        string secondPart = parts[1].Trim().TrimStart('$').Trim();
+        if (!float.TryParse(secondPart, NumberStyles.Float, CultureInfo.InvariantCulture, out float secondValue))
+        {
+            Application.Current.MainPage.DisplayAlert("Amount Format", "0.06 ~ $226.27", "OK");
+        }
+
+        // Return the product of the two values
+        return firstValue * secondValue;
+    }
+
+
+
+    private async void DeleteWallet(Wallet wallet)
+    {
+        // Delete wallet from database
+        using (MySqlConnection connection = StGlobal.GetSqlConnection())
+        {
+            connection.Open();
+
+            string query = "DELETE FROM ManageWallets WHERE Id = @Id";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Id", wallet.Id);
+
+            int rowsAffected = command.ExecuteNonQuery();
+
+            if (rowsAffected > 0)
+            {
+                Wallets.Remove(wallet);
+                await Application.Current.MainPage.DisplayAlert("Success", "Deleted successfully", "OK");
+                LoadWallets();
+            }
+        }
+    }
+
+    private void EditWallet(Wallet wallet)
+    {
+        editingWallet = wallet;
+        editSeedPhrase = wallet.SeedPhrase;
+        editBlockchain = wallet.Blockchain;
+        editAmount = wallet.Amount;
+        editLicence = wallet.Licence;
+        editId = wallet.Id;
+        OpenModal1(wallet.Id);
+
+    }
+
+    private void UpdateWallet(Wallet wallet)
+    {
+        using (MySqlConnection connection = StGlobal.GetSqlConnection())
+        {
+            connection.Open();
+            string query = "UPDATE ManageWallets SET Seed_Phrase = @Seed_Phrase, Blockchain = @Blockchain,Amount = @Amount,Licence = @Licence WHERE Id = @Id";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Seed_Phrase", editSeedPhrase);
+            command.Parameters.AddWithValue("@Blockchain", editBlockchain);
+            command.Parameters.AddWithValue("@Amount", editAmount);
+            command.Parameters.AddWithValue("@Licence", editLicence);
+            command.Parameters.AddWithValue("@Id", editId);
+
+            int rowsAffected = command.ExecuteNonQuery();
+
+            if (rowsAffected > 0)
+            {
+                // Update successful
+                Console.WriteLine("update successfully.");
+                LoadWallets();
+                CloseModal1();
+            }
+            else
+            {
+                Console.WriteLine("Not update successfully.");
+            }
+        }
+    }
+
+    public class Wallet
+    {
+        public int Id { get; set; }
+        public string SeedPhrase { get; set; }
+        public string Blockchain { get; set; }
+        public string Amount { get; set; }
+        public string Licence { get; set; }
+        public int User_Id { get; set; }
+    }
+}
+
+<script>
+
+    // Get references to elements
+    const formOpenModalButton = document.getElementById('formOpenModalButton');
+    const formCloseModalButton = document.getElementById('formCancelButton');
+    const modal1 = document.getElementById('formModal');
+
+    // Function to open modal
+    function openModal1() {
+        modal1.classList.remove('hidden');
+    }
+
+    // Function to close modal
+    function closeModal1() {
+        modal1.classList.add('hidden');
+    }
+
+    // Event listeners to toggle modal visibility
+    formOpenModalButton.addEventListener('click', openModal1);
+    formCloseModalButton.addEventListener('click', closeModal1);
+</script>
+

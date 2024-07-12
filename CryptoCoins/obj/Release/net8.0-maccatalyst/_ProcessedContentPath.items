@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Content Include="Resources\Raw\AboutAssets.txt" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Release\net8.0-maccatalyst\scopedcss\bundle\CryptoCoins.styles.css" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\obj\Release\net8.0-maccatalyst\scopedcss\projectbundle\CryptoCoins.bundle.scp.css" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\css\app.css" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\css\bootstrap\bootstrap.min.css" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\css\bootstrap\bootstrap.min.css.map" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\css\pages\dashboard.css" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\css\pages\launchpad.css" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\css\pages\licencepage.css" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\css\pages\subscriptions.css" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\favicon.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\addtocart.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\ALL.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\basket (1).png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\basket.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\bnb b.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\bnb.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\bnbb.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\btc copia.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\btc.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\btccopia.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\coin.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\CRlogo.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\dollar (1).png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\dollar (2).png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\dollar.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\eth.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\favicon.jpg" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\logo.jpg" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\open-box.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\price.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\sol2.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\sun.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\usdt copia.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\usdt.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\usdtcopia.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\images\xrp.png" />
+    <Content Include="E:\fiverr\code\mark n\latest\1\CryptoCoins_28May\CryptoCoins\wwwroot\index.html" />
+  </ItemGroup>
+</Project>

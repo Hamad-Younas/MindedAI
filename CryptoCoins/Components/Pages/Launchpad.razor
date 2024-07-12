@@ -1,0 +1,958 @@
+﻿@page "/launchpad";
+@using CryptoCoins.Helpers
+@using MySql.Data.MySqlClient
+@using NBitcoin
+@using CryptoCoins.Services
+@using System.Diagnostics
+@using static CryptoCoins.Components.Pages.ManageWallets
+@inject IJSRuntime JSRuntime
+@inject PackagesService PackagesService
+
+<div class="dashboard">
+    <div class="head-home crypto-heading">
+        <h4 class="heading">Crypto Launchpad</h4>
+    </div>
+    <div class="mt-4">
+        <h7 class="text-lg font-bold">
+            Select a blockchain
+        </h7>
+        <p class="text-xs font-normal text-gray-400">
+            Here you can turn on/off blockchains for search
+        </p>
+    </div>
+    <div class="flex justify-content-evenly items-center gap-10 mt-2">
+        <label for="myCheckbox" id="check-coin-card" class="cursor-hand w-full flex flex-col items-center justify-center gap-1 py-3" style="background-color:#383838;border-radius:5px;">
+            <img src="images/btccopia.png" width="80" height="60" class="text-center text-white">
+            <p class="font-bold text-xl text-center">BTC</p>
+            <div class="w-full flex justify-end">
+                <!-- Hidden checkbox -->
+                <input type="checkbox" id="myCheckbox" class="custom-checkbox custom-checkbox1 h-8 w-8" style="border:1px solid #f7931a"
+                       @onchange="myCheckboxCheckedChanged">
+                <!-- Visible label to style as custom checkbox -->
+                <label for="myCheckbox"></label>
+            </div>
+        </label>
+        <label for="myCheckbox1" id="check-coin-card1" class="cursor-hand w-full flex flex-col items-center justify-center gap-1 py-3" style="background-color:#383838;border-radius:5px;">
+            <img src="images/bnbb.png" width="80" height="60" class="text-center text-white">
+            <p class="font-bold text-lg text-center">BNB</p>
+            <div class="w-full flex justify-end">
+                <!-- Hidden checkbox -->
+                <input type="checkbox" id="myCheckbox1" class="custom-checkbox custom-checkbox2 h-8 w-8"
+                       style="border:1px solid #f0b90b" @onchange="myCheckbox1CheckedChanged">
+                <!-- Visible label to style as custom checkbox -->
+                <label for="myCheckbox1"></label>
+            </div>
+        </label>
+        <label for="myCheckbox2" id="check-coin-card2" class="cursor-hand w-full flex flex-col items-center justify-center gap-1 py-3" style="background-color:#383838;border-radius:5px;">
+            <img src="images/eth.png" width="80" height="60" class="text-center text-white">
+            <p class="font-bold text-lg text-center">ETH</p>
+            <div class="w-full flex justify-end">
+                <!-- Hidden checkbox -->
+                <input type="checkbox" id="myCheckbox2" @onchange="myCheckbox2CheckedChanged"
+                       class="custom-checkbox custom-checkbox3 h-8 w-8" style="border:1px solid #9c9c9b">
+                <!-- Visible label to style as custom checkbox -->
+                <label for="myCheckbox2"></label>
+            </div>
+        </label>
+        <label for="myCheckbox7" id="check-coin-card7" class="cursor-hand w-full flex flex-col items-center justify-center gap-1 py-3" style="background-color:#383838;border-radius:5px;">
+            <img src="images/ALL.png" width="80" height="60" class="text-center text-white">
+            <p class="font-bold text-lg text-center">ALL Chains</p>
+            <div class="w-full flex justify-end">
+                <!-- Hidden checkbox -->
+                <input type="checkbox" id="myCheckbox7" class="custom-checkbox custom-checkbox4 h-8 w-8"
+                       style="border:1px solid #ffa939" @onchange="myCheckbox7CheckedChanged">
+                <!-- Visible label to style as custom checkbox -->
+                <label for="myCheckbox7"></label>
+            </div>
+        </label>
+    </div>
+    <div class="mt-4 text-center">
+        <p class="text-lg font-bold">Checked : @checkCount</p>
+    </div>
+    <div id="scrollContainer" class="mt-2 rounded-md" style="font-size:14px;max-height: 300px; overflow-y: auto; height: 300px; background-color:#383838;">
+        @foreach (var item in SeedPhraseList)
+        {
+            @foreach (var part in item.Parts)
+            {
+                <span style="@(part.Color.ToUpper() == "#FFFFFF" ? $"color: {part.Color};" : "") margin-left: 10px; margin-right: 10px;"
+                      class="@(part.Color.ToUpper() == "#FFFFFF" ? "" : "gradient-text")">
+                    @part.Text
+                </span>
+            }
+            <br />
+        }
+    </div>
+    <div class="mt-4 flex justify-center gap-10">
+        <button id="formOpenModalButton" class="formOpenModalButton w-100 startBtn px-4 py-2 text-base font-normal border border-black rounded-md transition-colors duration-300">
+            Start search
+        </button>
+        <button class="w-100 stopBtn px-4 py-2 text-base font-normal border rounded-md transition-colors duration-300"
+                @onclick="StopSearchClicked">
+            Stop search
+        </button>
+    </div>
+    <div class="w-100 mt-4 text-white rounded-md coin-table" style="background-color:#383838;height:450px;overflow-y:auto">
+        <div class="w-100 align-middle inline-block overflow-hidden px-8 pt-3 rounded-bl-lg rounded-br-lg">
+            <table class="w-100">
+                <thead>
+                    <tr>
+                        <th class="w-1/3 px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-white tracking-wider">Wallets found</th>
+                        <th class="w-1/3 px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-white tracking-wider">Blockchain</th>
+                        <th class="w-1/3 px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-white tracking-wider">Amount</th>
+                    </tr>
+                </thead>
+                <tbody style="">
+
+                    @foreach (var wallet in Wallets)
+                    {
+                        if (wallet.Blockchain == "BTC")
+                        {
+                            color = "#f7931a";
+                        }
+                        if (wallet.Blockchain == "BNB")
+                        {
+                            color = "#f0b90b";
+                        }
+                        if (wallet.Blockchain == "ETH")
+                        {
+                            color = "#9c9c9b";
+                        }
+                        if (wallet.Blockchain == "XRP")
+                        {
+                            color = "#ffffff";
+                        }
+                        if (wallet.Blockchain == "SOL")
+                        {
+                            color = "#ae65fc";
+                        }
+                        if (wallet.Blockchain == "USDT")
+                        {
+                            color = "#50af95";
+                        }
+                        <tr>
+                            <td class="w-1/3 px-6 py-2 whitespace-no-wrap">
+                                <p class="openModalButton text-decoration-underline text-gray-400 cursor-pointer" style="color:@color" id="openModalButton"
+                                   data-seedphrase="@wallet.SeedPhrase"
+                                   data-blockchain="@wallet.Blockchain"
+                                   data-amount="@wallet.Amount">@wallet.SeedPhrase.Substring(0, Math.Min(10, @wallet.SeedPhrase.Length))</p>
+                            </td>
+                            <td class="w-1/3 px-6 py-2 flex items-center gap-2 text-sm leading-5 text-white whitespace-no-wrap">
+                                @* <img src="images/btccopia.png" alt="btc" width="30" height="30" /> *@
+                                @switch (wallet.Blockchain)
+                                {
+                                    case "BTC":
+                                        <img src="images/btc.png" alt="rpl" width="30" height="30" />
+                                        break;
+                                    case "BNB":
+                                        <img src="images/bnb.png" alt="eth" width="30" height="30" />
+                                        break;
+                                    case "ETH":
+                                        <img src="images/eth.png" alt="btc" width="30" height="30" />
+                                        break;
+                                    case "SOL":
+                                        <img src="images/sol2.png" alt="crd" width="30" height="30" />
+                                        break;
+                                    case "USDT":
+                                        <img src="images/usdt.png" alt="crd" width="30" height="30" />
+                                        break;
+                                    case "XRP":
+                                        <img src="images/xrp.png" alt="crd" width="30" height="30" />
+                                        break;
+                                        // Add more cases as needed
+                                        @* default:
+                            <img src="images/default.png" alt="default" width="30" height="30" />
+                            break; *@
+                                }
+                                <p style="color:@color;font-weight:bold;">@wallet.Blockchain</p>
+                            </td>
+                            <td class="w-1/3 px-6 py-2 whitespace-no-wrap text-sm leading-5" style="color:@color">@wallet.Amount</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div id="formModal" class="modal fixed w-full h-full top-0 left-0 flex items-center justify-center hidden">
+    <!-- Overlay -->
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+    <div class="modal-container w-1/2 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+        <!-- Modal content -->
+        <div class="modal-content text-white py-4 text-left px-6" style="background-color:#383838;">
+            <div class="formImg flex flex-column justify-center items-center">
+                <div class="my-4">
+                </div>
+                <p>Login to Mined AI</p>
+                <p class="text-gray-400">Put your activation key here</p>
+            </div>
+            <div class="flex w-100 my-2">
+                <input @bind="password" type="password" class="w-100 py-2 text-black border rounded-md border-dark" />
+            </div>
+            <div class="flex flex-column gap-2">
+                <button @onclick="ActivateAsync" id="formCancelButton" class="w-100 startBtn px-4 py-2 text-base font-normal border border-black rounded-md transition-colors duration-300">Activate</button>
+                <button class="w-100 stopBtn px-4 py-2 text-base font-normal border rounded-md transition-colors duration-300">Support</button>
+            </div>
+            <div class="mt-10 flex justify-center">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="modal" class="modal fixed w-full h-full top-0 left-0 flex items-center justify-center hidden">
+    <!-- Overlay -->
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+    <div class="modal-container w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+        <!-- Modal content -->
+        <div class="modal-content text-white py-4 text-left px-6" style="background-color:#383838;">
+            <div class="flex justify-between items-center pb-3">
+                <p class="text-2xl font-bold">Seed Phrase</p>
+                <div id="closeModalButton" class="modal-close cursor-pointer z-50">
+                    <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                        <path d="M1.39 1.393l15.318 15.314m-15.318 0L16.706 1.393" />
+                    </svg>
+                </div>
+            </div>
+            <p id="modal-blockchain">Blockchain - BTC</p>
+            <p id="modal-seedphrase">Seed Phrase - wire issue ivory please few tooth edit</p>
+            <p id="modal-amount">Balance - 0.0036</p>
+            <div class="mt-4 flex justify-end">
+                <button id="" class="hidden px-4 bg-gray-100 p-3 rounded-lg text-black hover:bg-gray-200">Cancel</button>
+                <button id="cancelButton" class="modal-close px-4 p-3 ml-3 rounded-lg text-white hover:bg-purple-400" style="background-color:#202022">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="checkmodal" class="modal fixed w-full top-0 left-0 flex items-center justify-center hidden">
+    <!-- Overlay -->
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+    <div class="modal-container w-1/2 mx-auto rounded shadow-lg z-50 overflow-y-auto">
+        <!-- Modal content -->
+        <div class="modal-content text-white py-4 text-left px-6" style="background-color:#383838;">
+            <div class="flex justify-between items-center pb-3">
+                <p class="text-2xl font-bold">Select Blockchains for research</p>
+                <div id="closeModalButton" class="modal-close cursor-pointer z-50">
+                    <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                        <path d="M1.39 1.393l15.318 15.314m-15.318 0L16.706 1.393" />
+                    </svg>
+                </div>
+            </div>
+            <div class="flex justify-content-evenly items-center gap-10 mt-2">
+                <label for="modelCheckbox" id="check-coin-card" class="w-full flex flex-col items-center justify-center gap-1 py-1" style="background-color:#f7931a;border-radius:5px;">
+                    <img src="images/btccopia.png" width="90" height="60" class="text-center text-white">
+                    <p class="font-bold text-lg text-center">BTC</p>
+                    <div class="w-full flex justify-end">
+                        <!-- Hidden checkbox -->
+                        <input type="checkbox" checked id="modelCheckbox" class="custom-checkbox custom-checkbox1 h-8 w-8" style="border:1px solid #f7931a">
+                        <!-- Visible label to style as custom checkbox -->
+                        <label for="modelCheckbox"></label>
+                    </div>
+                </label>
+                <label for="modelCheckbox1" id="check-coin-card1" class="w-full flex flex-col items-center justify-center gap-1 py-1" style="background-color:#f0b90b;border-radius:5px;">
+                    <img src="images/bnbb.png" width="90" height="60" class="text-center text-white">
+                    <p class="font-bold text-lg text-center">BNB</p>
+                    <div class="w-full flex justify-end">
+                        <!-- Hidden checkbox -->
+                        <input type="checkbox" checked id="modelCheckbox1" class="custom-checkbox custom-checkbox2 h-8 w-8" style="border:1px solid #f0b90b">
+                        <!-- Visible label to style as custom checkbox -->
+                        <label for="modelCheckbox1"></label>
+                    </div>
+                </label>
+                <label for="modelCheckbox2" id="check-coin-card2" class="w-full flex flex-col items-center justify-center gap-1 py-1" style="background-color:#9c9c9b;border-radius:5px;">
+                    <img src="images/eth.png" width="90" height="60" class="text-center text-white">
+                    <p class="font-bold text-lg text-center">ETH</p>
+                    <div class="w-full flex justify-end">
+                        <!-- Hidden checkbox -->
+                        <input type="checkbox" checked id="modelCheckbox2" class="custom-checkbox custom-checkbox3 h-8 w-8" style="border:1px solid #9c9c9b">
+                        <!-- Visible label to style as custom checkbox -->
+                        <label for="modelCheckbox2"></label>
+                    </div>
+                </label>
+            </div>
+            <div class="flex justify-content-evenly items-center gap-10 mt-2">
+                <label for="modelCheckbox3" id="check-coin-card" class="w-full flex flex-col items-center justify-center gap-1 py-1" style="background-color:#ae65fc;border-radius:5px;">
+                    <img src="images/sol2.png" width="90" height="60" class="text-center text-white">
+                    <p class="font-bold text-lg text-center">SOL</p>
+                    <div class="w-full flex justify-end">
+                        <!-- Hidden checkbox -->
+                        <input type="checkbox" checked id="modelCheckbox3" class="custom-checkbox custom-checkbox1 h-8 w-8" style="border:1px solid #ae65fc">
+                        <!-- Visible label to style as custom checkbox -->
+                        <label for="modelCheckbox3"></label>
+                    </div>
+                </label>
+                <label for="modelCheckbox4" id="check-coin-card1" class="w-full flex flex-col items-center justify-center gap-1 py-1" style="background-color:#50af95;border-radius:5px;">
+                    <img src="images/usdtcopia.png" width="90" height="60" class="text-center text-white">
+                    <p class="font-bold text-lg text-center">USDT</p>
+                    <div class="w-full flex justify-end">
+                        <!-- Hidden checkbox -->
+                        <input type="checkbox" checked id="modelCheckbox4" class="custom-checkbox custom-checkbox2 h-8 w-8" style="border:1px solid #50af95">
+                        <!-- Visible label to style as custom checkbox -->
+                        <label for="modelCheckbox4"></label>
+                    </div>
+                </label>
+                <label for="modelCheckbox5" id="check-coin-card2" class="w-full flex flex-col items-center justify-center gap-1 py-1" style="background-color:#ffffff;border-radius:5px;">
+                    <img src="images/xrp.png" width="90" height="60" class="text-center text-white">
+                    <p class="font-bold text-lg text-black text-center">XRP</p>
+                    <div class="w-full flex justify-end">
+                        <!-- Hidden checkbox -->
+                        <input type="checkbox" checked id="modelCheckbox5" class="custom-checkbox custom-checkbox3 h-8 w-8" style="border:1px solid #ffffff">
+                        <!-- Visible label to style as custom checkbox -->
+                        <label for="modelCheckbox5"></label>
+                    </div>
+                </label>
+            </div>
+            <div class="mt-4 flex justify-end">
+                <button id="checksaveButton" class="px-4 p-3 ml-3 rounded-lg text-white hover:bg-purple-400" style="background-color:#202022">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    private int User_Id { get; set; }
+    private List<Wallet> Wallets = new List<Wallet>();
+
+    public static bool myCheckboxChecked = false;
+    public static bool myCheckbox1Checked = false;
+    public static bool myCheckbox2Checked = false;
+    public static bool myCheckbox3Checked = false;
+    public static bool myCheckbox4Checked = false;
+    public static bool myCheckbox5Checked = false;
+    public static bool myCheckbox6Checked = false;
+    public static bool myCheckbox7Checked = false;
+    public static string textColor = "#FFFFFF"; // Default text color
+    public static string textColor2 = "#FFFFFF"; // Default text color
+    public static string textColor3 = "#FFFFFF"; // Default text color
+    private List<SeedPhraseItem> SeedPhraseList = new List<SeedPhraseItem>();
+
+
+    private string password;
+    private string SeedPhrase { get; set; } = "";
+    private bool IsSeedPhrase { get; set; }
+    private string subscriptionName;
+    public string color = "";
+    int checkCount = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        myCheckboxChecked = false;
+        myCheckbox1Checked = false;
+        myCheckbox2Checked = false;
+        myCheckbox3Checked = false;
+        myCheckbox4Checked = false;
+        myCheckbox5Checked = false;
+        myCheckbox6Checked = false;
+        myCheckbox7Checked = false;
+        SeedPhraseList = new List<SeedPhraseItem>();
+        User_Id = 1;
+        GetWallets();
+    }
+
+    private void GetWallets()
+    {
+        Wallets.Clear();
+
+        using (MySqlConnection connection = StGlobal.GetSqlConnection())
+        {
+            connection.Open();
+
+            string query = "SELECT Seed_Phrase, Blockchain, Amount, Licence,Id FROM ManageWallets WHERE User_Id = @User_Id";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@User_Id", StGlobal.Id);
+            MySqlDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Wallets.Add(new Wallet
+                        {
+                            SeedPhrase = reader.GetString(reader.GetOrdinal("Seed_Phrase")),
+                            Blockchain = reader.GetString(reader.GetOrdinal("Blockchain")),
+                            Amount = reader.GetString(reader.GetOrdinal("Amount")),
+                            Licence = reader.GetString(reader.GetOrdinal("Licence")),
+                            Id = reader.GetInt32(reader.GetOrdinal("Id"))
+                        });
+                }
+            }
+        }
+    }
+
+    private async Task ActivateAsync()
+    {
+        IsSeedPhrase = false;
+        SeedPhrase = string.Empty;
+        SeedPhraseList.Clear();
+
+        int count = 0;
+        int scount = 0;
+        if (myCheckboxChecked)
+        {
+            count++;
+        }
+        if (myCheckbox1Checked)
+        {
+            count++;
+        }
+        if (myCheckbox2Checked)
+        {
+            count++;
+        }
+        if (myCheckbox7Checked)
+        {
+            count++;
+        }
+
+        subscriptionName = await CheckSubscriptionKeyAsync(password);
+
+        if (subscriptionName == null)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", "You didn't subscribe to any package.");
+            return;
+        }
+        if (myCheckbox7Checked && PackagesService.Names.Contains("All Coins"))
+        {
+            await GetAllSeedPhrase();
+            return;
+        }
+        if (count == 1)
+        {
+            if (myCheckboxChecked && PackagesService.Names.Contains("BTC"))
+            {
+                scount++;
+                await GetBTCSeedPhrase();
+                return;
+            }
+            if (myCheckbox1Checked && PackagesService.Names.Contains("BNB"))
+            {
+                scount++;
+                await GetBNBSeedPhrase();
+                return;
+            }
+            if (myCheckbox2Checked && PackagesService.Names.Contains("ETH"))
+            {
+                scount++;
+                await GetETHSeedPhrase();
+                return;
+            }
+            if(scount == 0)
+            {
+                await JSRuntime.InvokeVoidAsync("alert", "You didn't subscribe to this package.");
+                return;
+            }
+        }
+        else if (count == 2)
+        {
+            if (myCheckboxChecked && PackagesService.Names.Contains("BTC") && myCheckbox1Checked && PackagesService.Names.Contains("BNB"))
+            {
+                scount++;
+                await GenerateSeedPhrasesAsync2(3000000, TimeSpan.FromHours(24), "#f7931a", "#f0b90b", "BTC", "BNB");
+                return;
+            }
+            if (myCheckboxChecked && PackagesService.Names.Contains("BTC") && myCheckbox2Checked && PackagesService.Names.Contains("ETH"))
+            {
+                scount++;
+                await GenerateSeedPhrasesAsync2(3000000, TimeSpan.FromHours(24), "#f7931a", "#9c9c9b", "BTC", "ETH");
+                return;
+            }
+            if (myCheckbox2Checked && PackagesService.Names.Contains("ETH") && myCheckbox1Checked && PackagesService.Names.Contains("BNB"))
+            {
+                scount++;
+                await GenerateSeedPhrasesAsync2(2250000, TimeSpan.FromHours(24), "#9c9c9b", "#f0b90b", "ETH", "BNB");
+                return;
+            }
+            if (scount == 0)
+            {
+                await JSRuntime.InvokeVoidAsync("alert", "You didn't subscribe to this package.");
+                return;
+            }
+        }
+        else if(count == 3)
+        {
+            if (myCheckboxChecked && PackagesService.Names.Contains("BTC") && myCheckbox1Checked && PackagesService.Names.Contains("BNB") && myCheckbox2Checked && PackagesService.Names.Contains("ETH"))
+            {
+                await GenerateSeedPhrasesAsync3(3000000, TimeSpan.FromHours(24), "#f7931a", "#9c9c9b", "#f0b90b", "BTC", "ETH", "BNB");
+            }
+            else
+            {
+                await JSRuntime.InvokeVoidAsync("alert", "You didn't subscribe to this package.");
+                return;
+            }
+        }
+        else
+        {
+            await JSRuntime.InvokeVoidAsync("alert", "You didn't subscribe to this package.");
+            return;
+        }
+    }
+
+    private async Task<string> CheckSubscriptionKeyAsync(string subscriptionKey)
+    {
+        using (MySqlConnection connection = StGlobal.GetSqlConnection())
+        {
+            await connection.OpenAsync();
+
+            string query = "SELECT subscription_name " +
+                           "FROM Subscriptions " +
+                           "WHERE user_id = @user_id AND Subscription_Key = @Subscription_Key";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@user_id", StGlobal.Id);
+            command.Parameters.AddWithValue("@Subscription_Key", subscriptionKey);
+
+            object result = await command.ExecuteScalarAsync();
+            return result != null ? result.ToString() : null;
+        }
+    }
+
+    private async Task GetBTCSeedPhrase()
+    {
+        await GenerateSeedPhrasesAsync(3000000, TimeSpan.FromHours(24), "#f7931a", "BTC");
+    }
+
+    private async Task GetBNBSeedPhrase()
+    {
+        await GenerateSeedPhrasesAsync(1500000, TimeSpan.FromHours(24), "#f0b90b", "BNB");
+    }
+
+    private async Task GetETHSeedPhrase()
+    {
+        await GenerateSeedPhrasesAsync(2250000, TimeSpan.FromHours(24), "#9c9c9b", "ETH");
+    }
+
+    private async Task GetAllSeedPhrase()
+    {
+        await GenerateSeedPhrasesAsync(4500000, TimeSpan.FromHours(24), "#0fa10b", "All");
+    }
+
+    private async Task GenerateSeedPhrasesAsync(int targetRows, TimeSpan interval, string color, string blockchain)
+    {
+        int millisecondsDelay = (int)(interval.TotalMilliseconds / targetRows);
+        DateTime endTime = DateTime.Now.Add(interval);
+        int generatedRows = 0;
+        IsSeedPhrase = true;
+        
+        if(blockchain == "All")
+        {
+            while (DateTime.Now < endTime && generatedRows < targetRows)
+            {
+                if (IsSeedPhrase)
+                {
+                    Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
+                    textColor = color;
+                    SeedPhraseList.Add(new SeedPhraseItem
+                        {
+                            Parts = new List<ColoredTextPart>
+                            {
+                                new ColoredTextPart { Text = "Balance:", Color = "#ffb33b" },
+                                new ColoredTextPart { Text = $"0 ", Color = "#FFFFFF" },
+                                new ColoredTextPart { Text = "| Seed Phrase:", Color = "#ffb33b" },// Use default color or specify another
+                                new ColoredTextPart { Text = $"{mnemonic}", Color = "#FFFFFF" },
+                            }
+                        });
+                    checkCount++;
+                    generatedRows++;
+                    await Task.Delay(millisecondsDelay);
+                    StateHasChanged();
+                    await JSRuntime.InvokeVoidAsync("scrollToBottom", "scrollContainer");
+                }
+                else
+                {
+                    break;
+                }
+            }            
+        }
+        else
+        {
+            while (DateTime.Now < endTime && generatedRows < targetRows)
+            {
+                if (IsSeedPhrase)
+                {
+                    Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
+                    textColor = color;
+                    SeedPhraseList.Add(new SeedPhraseItem
+                        {
+                            Parts = new List<ColoredTextPart>
+                            {
+                                new ColoredTextPart { Text = "Balance:", Color = "#ffb33b" },
+                                new ColoredTextPart { Text = $"0 ", Color = "#FFFFFF" },
+                                new ColoredTextPart { Text = "| Seed Phrase:", Color = "#ffb33b" },// Use default color or specify another
+                                new ColoredTextPart { Text = $"{mnemonic}", Color = "#FFFFFF" },
+                            }
+                        });
+                    checkCount++;
+                    generatedRows++;
+                    await Task.Delay(millisecondsDelay);
+                    StateHasChanged();
+                    await JSRuntime.InvokeVoidAsync("scrollToBottom", "scrollContainer");
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+        
+    }
+
+    private async Task GenerateSeedPhrasesAsync2(int targetRows, TimeSpan interval, string color, string color2, string blockchain, string blockchain2)
+    {
+        int millisecondsDelay = (int)(interval.TotalMilliseconds / targetRows);
+        DateTime endTime = DateTime.Now.Add(interval);
+        int generatedRows = 0;
+        IsSeedPhrase = true;
+
+        if (blockchain == "All")
+        {
+            while (DateTime.Now < endTime && generatedRows < targetRows)
+            {
+                if (IsSeedPhrase)
+                {
+                    Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
+                    textColor = color;
+                    SeedPhraseList.Add(new SeedPhraseItem
+                        {
+                            Parts = new List<ColoredTextPart>
+                            {
+                                new ColoredTextPart { Text = "Balance: ", Color = textColor },
+                                new ColoredTextPart { Text = $"0 ", Color = "#FFFFFF" },
+                                new ColoredTextPart { Text = "| ", Color = textColor },// Use default color or specify another
+                                new ColoredTextPart { Text = $"{mnemonic}", Color = "#FFFFFF" },
+                            }
+                        });
+                    generatedRows++;
+                    await Task.Delay(millisecondsDelay);
+                    StateHasChanged();
+                    await JSRuntime.InvokeVoidAsync("scrollToBottom", "scrollContainer");
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+        else
+        {
+            while (DateTime.Now < endTime && generatedRows < targetRows)
+            {
+                if (IsSeedPhrase)
+                {
+                    Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
+                    textColor = color;
+                    textColor2 = color2;
+                    SeedPhraseList.Add(new SeedPhraseItem
+                        {
+                            Parts = new List<ColoredTextPart>
+                            {
+                                new ColoredTextPart { Text = "Balance:", Color = textColor },
+                                new ColoredTextPart { Text = $"0 {blockchain}", Color = "#FFFFFF" },
+                                new ColoredTextPart { Text = "| Seed Phrase:", Color = textColor },// Use default color or specify another
+                                new ColoredTextPart { Text = $"{mnemonic}", Color = "#FFFFFF" },
+                            }
+                        });
+                    SeedPhraseList.Add(new SeedPhraseItem
+                    {
+                        Parts = new List<ColoredTextPart>
+                        {
+                            new ColoredTextPart { Text = "Balance:", Color = textColor2 },
+                            new ColoredTextPart { Text = $"0 {blockchain2}", Color = "#FFFFFF" },
+                            new ColoredTextPart { Text = "| Seed Phrase:", Color = textColor2 },// Use default color or specify another
+                            new ColoredTextPart { Text = $"{mnemonic}", Color = "#FFFFFF" },
+                        }
+                    });
+                    generatedRows++;
+                    await Task.Delay(millisecondsDelay);
+                    StateHasChanged();
+                    await JSRuntime.InvokeVoidAsync("scrollToBottom", "scrollContainer");
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+    }
+
+    private async Task GenerateSeedPhrasesAsync3(int targetRows, TimeSpan interval, string color, string color2, string color3, string blockchain, string blockchain2, string blockchain3)
+    {
+        int millisecondsDelay = (int)(interval.TotalMilliseconds / targetRows);
+        DateTime endTime = DateTime.Now.Add(interval);
+        int generatedRows = 0;
+        IsSeedPhrase = true;
+
+        if (blockchain == "All")
+        {
+            while (DateTime.Now < endTime && generatedRows < targetRows)
+            {
+                if (IsSeedPhrase)
+                {
+                    Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
+                    textColor = color;
+                    SeedPhraseList.Add(new SeedPhraseItem
+                        {
+                            Parts = new List<ColoredTextPart>
+                            {
+                                new ColoredTextPart { Text = "Balance: ", Color = textColor },
+                                new ColoredTextPart { Text = $"0 ", Color = "#FFFFFF" },
+                                new ColoredTextPart { Text = "| ", Color = textColor },// Use default color or specify another
+                                new ColoredTextPart { Text = $"{mnemonic}", Color = "#FFFFFF" },
+                            }
+                        });
+                    generatedRows++;
+                    await Task.Delay(millisecondsDelay);
+                    StateHasChanged();
+                    await JSRuntime.InvokeVoidAsync("scrollToBottom", "scrollContainer");
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+        else
+        {
+            while (DateTime.Now < endTime && generatedRows < targetRows)
+            {
+                if (IsSeedPhrase)
+                {
+                    Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
+                    textColor = color;
+                    textColor2 = color2;
+                    textColor3 = color3;
+                    SeedPhraseList.Add(new SeedPhraseItem
+                        {
+                            Parts = new List<ColoredTextPart>
+                            {
+                                new ColoredTextPart { Text = "Balance:", Color = textColor },
+                                new ColoredTextPart { Text = $"0 {blockchain}", Color = "#FFFFFF" },
+                                new ColoredTextPart { Text = "| Seed Phrase:", Color = textColor },// Use default color or specify another
+                                new ColoredTextPart { Text = $"{mnemonic}", Color = "#FFFFFF" },
+                            }
+                        });
+                    SeedPhraseList.Add(new SeedPhraseItem
+                        {
+                            Parts = new List<ColoredTextPart>
+                            {
+                                new ColoredTextPart { Text = "Balance:", Color = textColor2 },
+                                new ColoredTextPart { Text = $"0 {blockchain2}", Color = "#FFFFFF" },
+                                new ColoredTextPart { Text = "| Seed Phrase:", Color = textColor2 },// Use default color or specify another
+                                new ColoredTextPart { Text = $"{mnemonic}", Color = "#FFFFFF" },
+                            }
+                        });
+                    SeedPhraseList.Add(new SeedPhraseItem
+                        {
+                            Parts = new List<ColoredTextPart>
+                            {
+                                new ColoredTextPart { Text = "Balance:", Color = textColor3 },
+                                new ColoredTextPart { Text = $"0 {blockchain3}", Color = "#FFFFFF" },
+                                new ColoredTextPart { Text = "| Seed Phrase:", Color = textColor3 },// Use default color or specify another
+                                new ColoredTextPart { Text = $"{mnemonic}", Color = "#FFFFFF" },
+                            }
+                        });
+                    generatedRows++;
+                    await Task.Delay(millisecondsDelay);
+                    StateHasChanged();
+                    await JSRuntime.InvokeVoidAsync("scrollToBottom", "scrollContainer");
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+    }
+
+    private void myCheckboxCheckedChanged(ChangeEventArgs e)
+    {
+        myCheckboxChecked = (bool)e.Value;
+    }
+
+    private void myCheckbox1CheckedChanged(ChangeEventArgs e)
+    {
+        myCheckbox1Checked = (bool)e.Value;
+    }
+
+    private void myCheckbox2CheckedChanged(ChangeEventArgs e)
+    {
+        myCheckbox2Checked = (bool)e.Value;
+    }
+
+    private void myCheckbox7CheckedChanged(ChangeEventArgs e)
+    {
+        myCheckbox7Checked = (bool)e.Value;
+    }
+
+    private void StopSearchClicked(MouseEventArgs e)
+    {
+        IsSeedPhrase = false;
+    }
+
+    string GetTextColor()
+    {
+        return $"color: {textColor}; background-color: #383838; box-shadow: 2px 2px 4px 2px #383838;";
+    }
+
+    private void OpenModal()
+    {
+        JSRuntime.InvokeVoidAsync("openModal");
+    }
+
+    private void CloseModal()
+    {
+        JSRuntime.InvokeVoidAsync("closeModal");
+    }
+
+    private void OpenModal1()
+    {
+        JSRuntime.InvokeVoidAsync("openModal1");
+    }
+
+    private void CloseModal1()
+    {
+        JSRuntime.InvokeVoidAsync("closeModal1");
+    }
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            updateCardStyles("myCheckbox", "check-coin-card");
+            updateCardStyles("myCheckbox1", "check-coin-card1");
+            updateCardStyles("myCheckbox2", "check-coin-card2");
+            updateCardStyles("myCheckbox3", "check-coin-card3");
+            updateCardStyles("myCheckbox4", "check-coin-card4");
+            updateCardStyles("myCheckbox5", "check-coin-card5");
+            updateCardStyles("myCheckbox6", "check-coin-card6");
+            updateCardStyles("myCheckbox7", "check-coin-card7");
+
+
+            await JSRuntime.InvokeVoidAsync("eval", @"
+                const openModalButtons = document.querySelectorAll('.openModalButton');
+                const closeModalButton = document.getElementById('cancelButton');
+                const formopenModalButtons = document.querySelectorAll('.formOpenModalButton');
+                const formcloseModalButton = document.getElementById('formCancelButton');
+                const modal = document.getElementById('modal');
+                const modal1 = document.getElementById('formModal');
+
+                openModalButtons.forEach(button => {
+                    button.addEventListener('click', openModal);
+                });
+
+                if (closeModalButton) {
+                    closeModalButton.addEventListener('click', closeModal);
+                }
+
+                function openModal(event) {
+                    const button = event.target;
+                    const seedPhrase = button.getAttribute('data-seedphrase');
+                    const blockchain = button.getAttribute('data-blockchain');
+                    const amount = button.getAttribute('data-amount');
+
+                    document.getElementById('modal-seedphrase').textContent = `Seedphrase - ${seedPhrase}`;
+                    document.getElementById('modal-blockchain').textContent = `Blockchain - ${blockchain}`;
+                    document.getElementById('modal-amount').textContent = `Amount - ${amount} ${blockchain}`;
+
+                    modal.classList.remove('hidden');
+                }
+
+                function closeModal() {
+                    modal.classList.add('hidden');
+                }
+
+                formopenModalButtons.forEach(button => {
+                    button.addEventListener('click', formopenModal);
+                });
+
+                if (formcloseModalButton) {
+                    formcloseModalButton.addEventListener('click', closeModal1);
+                }
+
+                function formopenModal(event) {
+                    modal1.classList.remove('hidden');
+                }
+
+                function closeModal1() {
+                    modal1.classList.add('hidden');
+                }
+            ");
+        }
+    }
+
+    public class ColorTextItem
+    {
+        public string Color { get; set; }
+        public string Text { get; set; }
+    }
+    private void updateCardStyles(string checkboxId, string cardId)
+    {
+        var js = $"updateCardStyles('{checkboxId}', '{cardId}');";
+        JSRuntime.InvokeVoidAsync("eval", js);
+    }
+}
+
+<script>
+    function scrollToBottom(id) {
+        var container = document.getElementById(id);
+        container.scrollTop = container.scrollHeight;
+    }
+    function updateCardStyles(checkboxId, cardId) {
+        const checkbox = document.getElementById(checkboxId);
+        const card = document.getElementById(cardId);
+        const pTag = card.querySelector('p');
+
+        if (checkbox && card && pTag) {
+            checkbox.addEventListener('change', function () {
+                if (checkbox.checked) {
+                    switch (cardId) {
+                        case 'check-coin-card':
+                            card.style.backgroundColor = '#f7931a';
+                            break;
+                        case 'check-coin-card1':
+                            card.style.backgroundColor = '#f0b90b';
+                            break;
+                        case 'check-coin-card2':
+                            card.style.backgroundColor = '#9c9c9b';
+                            break;
+                        case 'check-coin-card7':
+                            const checkmodal = document.getElementById('checkmodal');
+                            const checkcloseModalButton = document.getElementById('checksaveButton');
+
+                            checkmodal.classList.remove('hidden');
+
+
+                            // Function to close modal
+                            function closeModal2() {
+                                checkmodal.classList.add('hidden');
+                            }
+
+                            checkcloseModalButton.addEventListener('click', closeModal2);
+
+                            card.style.background = 'linear-gradient(90deg, #f9a137, #ffcd33)';
+                            break;
+                        default:
+                            card.style.backgroundColor = '#fff';
+                    }
+                    pTag.style.color = '#000';
+                } else {
+                    card.style.background = "none";
+                    card.style.backgroundColor = '#383838';
+                    pTag.style.color = '';
+                }
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        updateCardStyles('myCheckbox', 'check-coin-card');
+        updateCardStyles('myCheckbox1', 'check-coin-card1');
+        updateCardStyles('myCheckbox2', 'check-coin-card2');
+        updateCardStyles('myCheckbox7', 'check-coin-card7');
+    });
+</script>

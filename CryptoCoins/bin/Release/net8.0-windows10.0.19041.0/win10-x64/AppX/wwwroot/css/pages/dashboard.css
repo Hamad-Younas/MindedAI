@@ -1,0 +1,77 @@
+﻿body {
+    background-color: #121218;
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    color:white;
+}
+
+.add-button {
+    background: linear-gradient(to right, #ffa939, #ffca33);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px; /* Adjust the value as needed */
+}
+
+
+.dashboard{
+    width:850px;
+    margin:0 auto;
+}
+.head-home {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items:center;
+}
+    .head-home h4 {
+        font-size: 20px;
+        font-weight: 900;
+    }
+.hor-card {
+    width: 100%;
+    background-color: #1b1b24;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.hor-card-but {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.hor-text{
+    width:400px;
+}
+.hor-fst-section {
+    width:700px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:20px;
+}
+.hor-card-but button{
+    width:120px;
+    border-radius:20px;
+    height:30px;
+    color:black;
+    font-size:12px;
+    border-radius:5px;
+}
+.hor-card-but svg{
+    width:20px;
+}
+.coin-table::-webkit-scrollbar {
+    width: 10px;
+    color:aliceblue;
+}
+
+.coin-table::-webkit-scrollbar-track {
+    background-color: #363636;
+}
+
+.coin-table::-webkit-scrollbar-thumb {
+    background-color: #535353;
+}
